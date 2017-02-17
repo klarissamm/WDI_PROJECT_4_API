@@ -3,7 +3,7 @@ Period.destroy_all
 
 User.create([
   {
-    name: "Steven Spielberg",
+    name: "Gigi Hadid",
     image: "https://upload.wikimedia.org/wikipedia/commons/5/5d/Steven_Spielberg_Cannes_2013_3.jpg"
   },
   {

@@ -24,7 +24,7 @@ class AuthenticationsController < ApplicationController
   private
     def user_params
       hash = {}
-      hash.merge! params.slice(:email, :password, :password_confirmation, :username, :age, :contraception)
+      hash.merge! params.slice(:email, :password, :password_confirmation, :username, :age, :contraception, :image)
       hash
     end
 end
