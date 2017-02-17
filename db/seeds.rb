@@ -3,29 +3,84 @@ Period.destroy_all
 
 User.create([
   {
-    name: "Gigi Hadid",
-    image: "https://upload.wikimedia.org/wikipedia/commons/5/5d/Steven_Spielberg_Cannes_2013_3.jpg"
+    username: "Gigi",
+    email: "gigi@gigi.com",
+    password: "password",
+    image: "https://cdn1.thehunt.com/app/public/system/zine_images/2605098/hunt/217b298b87379d4d15e2a554fefd8d49.jpg",
+    age: "21",
+    contraception: "Pill"
   },
   {
-    name: "Quentin Tarantino",
-    image: "https://images-na.ssl-images-amazon.com/images/M/MV5BMTgyMjI3ODA3Nl5BMl5BanBnXkFtZTcwNzY2MDYxOQ@@._V1_UX214_CR0,0,214,317_AL_.jpg"
-  }
-])
+    username: "Zadie",
+    email: "zadie@zadie.com",
+    password: "password",
+    image: "http://s3.amazonaws.com/libapps/accounts/20733/images/ZadieSmith.jpg",
+    age: "41",
+    contraception: "IUD"
 
-Period.create([
-  {
-    title: "E.T",
-    poster: "http://img.moviepostershop.com/et--the-extra-terrestrial-movie-poster-1982-1020141470.jpg",
-    director_id: 1
-  },
-  {
-    title: "Jaws",
-    poster: "https://www.movieposter.com/posters/archive/main/37/MPW-18721",
-    director_id: 1
-  },
-  {
-    title: "Django Unchained",
-    poster: "https://upload.wikimedia.org/wikipedia/en/8/8b/Django_Unchained_Poster.jpg",
-    director_id: 2
   }
 ])
+# add field of notes
+
+# Period.create([
+#   {
+#     date: Date.new(2017, 2, 12),
+#     bleeding: 3,
+#     pain: 5,
+#     user_id: 1
+#   },
+#   {
+#     date: Date.new(2017, 2, 13),
+#     bleeding: ,
+#     pain: ,
+#     user_id: 1
+#   },
+#   {
+#     date: Date.new(2017, 2, 14),
+#     bleeding: ,
+#     pain: ,
+#     user_id: 1
+#   },
+#   {
+#     date: Date.new(2017, 2, 15),
+#     bleeding: ,
+#     pain: ,
+#     user_id: 1
+#   },
+#   {
+#     date: Date.new(2017, 2, 16),
+#     bleeding: ,
+#     pain: ,
+#     user_id: 1
+#   },
+#   {
+#     date: Date.new(2017, 2, 12),
+#     bleeding: ,
+#     pain: ,
+#     user_id: 1
+#   },
+#   {
+#     date: Date.new(2017, 2, 13),
+#     bleeding: ,
+#     pain: ,
+#     user_id: 1
+#   },
+#   {
+#     date: Date.new(2017, 2, 14),
+#     bleeding: ,
+#     pain: ,
+#     user_id: 1
+#   },
+#   {
+#     date: Date.new(2017, 2, 15),
+#     bleeding: ,
+#     pain: ,
+#     user_id: 1
+#   },
+#   {
+#     date: Date.new(2017, 2, 16),
+#     bleeding: ,
+#     pain: ,
+#     user_id: 1
+#   },
+# ])
