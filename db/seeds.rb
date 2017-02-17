@@ -28,4 +28,4 @@ Period.create([
     poster: "https://upload.wikimedia.org/wikipedia/en/8/8b/Django_Unchained_Poster.jpg",
     director_id: 2
   }
-]
+])
