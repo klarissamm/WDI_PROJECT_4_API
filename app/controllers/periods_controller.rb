@@ -46,6 +46,6 @@ class PeriodsController < ApplicationController
 
     # Only allow a trusted parameter "white list" through.
     def period_params
-      params.require(:period).permit(:date, :bleeding, :pain, :user_id)
+      params.require(:period).permit(:date, :bleeding, :pain, :user_id, :notes)
     end
 end
