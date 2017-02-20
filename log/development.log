@@ -1228,3 +1228,426 @@ puma (3.7.0) lib/puma/server.rb:578:in `handle_request'
 puma (3.7.0) lib/puma/server.rb:415:in `process_client'
 puma (3.7.0) lib/puma/server.rb:275:in `block in run'
 puma (3.7.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started POST "/login" for 127.0.0.1 at 2017-02-20 11:09:37 +0000
+Processing by AuthenticationsController#login as HTML
+  Parameters: {"user"=>{"email"=>"leslie@president.com", "password"=>"[FILTERED]"}, "authentication"=>{"user"=>{"email"=>"leslie@president.com", "password"=>"[FILTERED]"}}}
+  [1m[36mUser Load (54.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.11ms)
+Completed 401 Unauthorized in 68ms (Views: 3.5ms | ActiveRecord: 56.8ms)
+
+
+Started POST "/register" for 127.0.0.1 at 2017-02-20 11:11:30 +0000
+Processing by AuthenticationsController#register as HTML
+  Parameters: {"user"=>{"username"=>"zadie", "image"=>"data:image/jpeg;base64,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", "email"=>"zadie@smith.com", "password"=>"[FILTERED]", "passwordConfirmation"=>"[FILTERED]"}, "authentication"=>{"user"=>{"username"=>"zadie", "image"=>"data:image/jpeg;base64,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", "email"=>"zadie@smith.com", "password"=>"[FILTERED]", "passwordConfirmation"=>"[FILTERED]"}}}
+DEPRECATION WARNING: Method to_hash is deprecated and will be removed in Rails 5.1, as `ActionController::Parameters` no longer inherits from hash. Using this deprecated behavior exposes potential security problems. If you continue to use this method you may be creating a security vulnerability in your app that can be exploited. Instead, consider using one of these documented methods which are not deprecated: http://api.rubyonrails.org/v5.0.1/classes/ActionController/Parameters.html (called from merge! at /Users/klarissamunz/development/WDI_PROJECT_4_API/app/controllers/authentications_controller.rb:27)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (1.5ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.25ms)
+Completed 422 Unprocessable Entity in 370ms (Views: 0.9ms | ActiveRecord: 8.5ms)
+
+
+Started POST "/register" for 127.0.0.1 at 2017-02-20 11:11:30 +0000
+Processing by AuthenticationsController#register as HTML
+  Parameters: {"user"=>{"username"=>"zadie", "image"=>"data:image/jpeg;base64,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", "email"=>"zadie@smith.com", "password"=>"[FILTERED]", "passwordConfirmation"=>"[FILTERED]"}, "authentication"=>{"user"=>{"username"=>"zadie", "image"=>"data:image/jpeg;base64,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", "email"=>"zadie@smith.com", "password"=>"[FILTERED]", "passwordConfirmation"=>"[FILTERED]"}}}
+DEPRECATION WARNING: Method to_hash is deprecated and will be removed in Rails 5.1, as `ActionController::Parameters` no longer inherits from hash. Using this deprecated behavior exposes potential security problems. If you continue to use this method you may be creating a security vulnerability in your app that can be exploited. Instead, consider using one of these documented methods which are not deprecated: http://api.rubyonrails.org/v5.0.1/classes/ActionController/Parameters.html (called from merge! at /Users/klarissamunz/development/WDI_PROJECT_4_API/app/controllers/authentications_controller.rb:27)
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.12ms)
+Completed 422 Unprocessable Entity in 6ms (Views: 0.5ms | ActiveRecord: 1.0ms)
+
+
+Started POST "/register" for 127.0.0.1 at 2017-02-20 11:13:34 +0000
+Processing by AuthenticationsController#register as HTML
+  Parameters: {"user"=>{"username"=>"zadie", "image"=>"fillmurray.com/200", "email"=>"zadie@smith.com", "password"=>"[FILTERED]", "passwordConfirmation"=>"[FILTERED]"}, "authentication"=>{"user"=>{"username"=>"zadie", "image"=>"fillmurray.com/200", "email"=>"zadie@smith.com", "password"=>"[FILTERED]", "passwordConfirmation"=>"[FILTERED]"}}}
+DEPRECATION WARNING: Method to_hash is deprecated and will be removed in Rails 5.1, as `ActionController::Parameters` no longer inherits from hash. Using this deprecated behavior exposes potential security problems. If you continue to use this method you may be creating a security vulnerability in your app that can be exploited. Instead, consider using one of these documented methods which are not deprecated: http://api.rubyonrails.org/v5.0.1/classes/ActionController/Parameters.html (called from merge! at /Users/klarissamunz/development/WDI_PROJECT_4_API/app/controllers/authentications_controller.rb:27)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.09ms)
+Completed 422 Unprocessable Entity in 5ms (Views: 0.6ms | ActiveRecord: 0.7ms)
+
+
+Started POST "/register" for 127.0.0.1 at 2017-02-20 11:15:30 +0000
+Processing by AuthenticationsController#register as HTML
+  Parameters: {"username"=>"zadie", "image"=>"fillmurray.com/200", "email"=>"zadie@smith.com", "password"=>"[FILTERED]", "passwordConfirmation"=>"[FILTERED]", "authentication"=>{"username"=>"zadie", "image"=>"fillmurray.com/200", "email"=>"zadie@smith.com", "password"=>"[FILTERED]", "passwordConfirmation"=>"[FILTERED]"}}
+DEPRECATION WARNING: Method to_hash is deprecated and will be removed in Rails 5.1, as `ActionController::Parameters` no longer inherits from hash. Using this deprecated behavior exposes potential security problems. If you continue to use this method you may be creating a security vulnerability in your app that can be exploited. Instead, consider using one of these documented methods which are not deprecated: http://api.rubyonrails.org/v5.0.1/classes/ActionController/Parameters.html (called from merge! at /Users/klarissamunz/development/WDI_PROJECT_4_API/app/controllers/authentications_controller.rb:27)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "zadie@smith.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "users" ("email", "password_digest", "username", "created_at", "updated_at", "image") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["email", "zadie@smith.com"], ["password_digest", "$2a$10$APm.aczMeqXDR5unrFKMjumm9a1ZoiPt7hzMIJaSRqhNnWvnFgZgG"], ["username", "zadie"], ["created_at", 2017-02-20 11:15:30 UTC], ["updated_at", 2017-02-20 11:15:30 UTC], ["image", "fillmurray.com/200"]]
+  [1m[35m (2.3ms)[0m  [1m[35mCOMMIT[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.29ms)
+Completed 200 OK in 102ms (Views: 1.0ms | ActiveRecord: 3.8ms)
+
+
+Started POST "/login" for 127.0.0.1 at 2017-02-20 11:15:42 +0000
+Processing by AuthenticationsController#login as HTML
+  Parameters: {"email"=>"zadie@smith.com", "password"=>"[FILTERED]", "authentication"=>{"email"=>"zadie@smith.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "zadie@smith.com"], ["LIMIT", 1]]
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.13ms)
+Completed 200 OK in 93ms (Views: 0.6ms | ActiveRecord: 0.7ms)
+
+
+Started POST "/login" for 127.0.0.1 at 2017-02-20 11:20:43 +0000
+Processing by AuthenticationsController#login as HTML
+  Parameters: {"user"=>{"email"=>"zadie@smith.com", "password"=>"[FILTERED]"}, "authentication"=>{"user"=>{"email"=>"zadie@smith.com", "password"=>"[FILTERED]"}}}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.09ms)
+Completed 401 Unauthorized in 2ms (Views: 0.5ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/login" for 127.0.0.1 at 2017-02-20 11:20:47 +0000
+Processing by AuthenticationsController#login as HTML
+  Parameters: {"user"=>{"email"=>"zadie@smith.com", "password"=>"[FILTERED]"}, "authentication"=>{"user"=>{"email"=>"zadie@smith.com", "password"=>"[FILTERED]"}}}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.13ms)
+Completed 401 Unauthorized in 2ms (Views: 0.6ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/login" for 127.0.0.1 at 2017-02-20 11:21:19 +0000
+Processing by AuthenticationsController#login as HTML
+  Parameters: {"user"=>{"email"=>"zadie@smith.com", "password"=>"[FILTERED]"}, "authentication"=>{"user"=>{"email"=>"zadie@smith.com", "password"=>"[FILTERED]"}}}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.13ms)
+Completed 401 Unauthorized in 2ms (Views: 0.6ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/login" for 127.0.0.1 at 2017-02-20 11:21:47 +0000
+Processing by AuthenticationsController#login as HTML
+  Parameters: {"email"=>"zadie@smith.com", "password"=>"[FILTERED]", "authentication"=>{"email"=>"zadie@smith.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "zadie@smith.com"], ["LIMIT", 1]]
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.13ms)
+Completed 200 OK in 88ms (Views: 0.6ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/login" for 127.0.0.1 at 2017-02-20 11:28:40 +0000
+Processing by AuthenticationsController#login as HTML
+  Parameters: {"email"=>"zadie@smith.com", "password"=>"[FILTERED]", "authentication"=>{"email"=>"zadie@smith.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "zadie@smith.com"], ["LIMIT", 1]]
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.21ms)
+Completed 200 OK in 107ms (Views: 1.0ms | ActiveRecord: 0.9ms)
+
+
+Started POST "/login" for 127.0.0.1 at 2017-02-20 11:30:42 +0000
+Processing by AuthenticationsController#login as HTML
+  Parameters: {"email"=>"zadie@smith.com", "password"=>"[FILTERED]", "authentication"=>{"email"=>"zadie@smith.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "zadie@smith.com"], ["LIMIT", 1]]
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.14ms)
+Completed 200 OK in 87ms (Views: 0.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2017-02-20 11:32:53 +0000
+  
+ActionController::RoutingError (No route matches [GET] "/users"):
+  
+actionpack (5.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.1) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.1) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.1) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.1) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.1) lib/rails/rack/logger.rb:24:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.1) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.1) lib/rack/sendfile.rb:111:in `call'
+rack-cors (0.4.1) lib/rack/cors.rb:81:in `call'
+railties (5.0.1) lib/rails/engine.rb:522:in `call'
+puma (3.7.0) lib/puma/configuration.rb:226:in `call'
+puma (3.7.0) lib/puma/server.rb:578:in `handle_request'
+puma (3.7.0) lib/puma/server.rb:415:in `process_client'
+puma (3.7.0) lib/puma/server.rb:275:in `block in run'
+puma (3.7.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started POST "/login" for 127.0.0.1 at 2017-02-20 11:42:32 +0000
+Processing by AuthenticationsController#login as HTML
+  Parameters: {"email"=>"zadie@smith.com", "password"=>"[FILTERED]", "authentication"=>{"email"=>"zadie@smith.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "zadie@smith.com"], ["LIMIT", 1]]
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.2ms)
+Completed 200 OK in 94ms (Views: 2.9ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/users/5" for 127.0.0.1 at 2017-02-20 11:42:32 +0000
+  
+ActionController::RoutingError (No route matches [GET] "/users/5"):
+  
+actionpack (5.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.1) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.1) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.1) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.1) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.1) lib/rails/rack/logger.rb:24:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.1) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.1) lib/rack/sendfile.rb:111:in `call'
+rack-cors (0.4.1) lib/rack/cors.rb:81:in `call'
+railties (5.0.1) lib/rails/engine.rb:522:in `call'
+puma (3.7.0) lib/puma/configuration.rb:226:in `call'
+puma (3.7.0) lib/puma/server.rb:578:in `handle_request'
+puma (3.7.0) lib/puma/server.rb:415:in `process_client'
+puma (3.7.0) lib/puma/server.rb:275:in `block in run'
+puma (3.7.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started POST "/login" for 127.0.0.1 at 2017-02-20 12:04:27 +0000
+Processing by AuthenticationsController#login as HTML
+  Parameters: {"email"=>"zadie@smith.com", "password"=>"[FILTERED]", "authentication"=>{"email"=>"zadie@smith.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "zadie@smith.com"], ["LIMIT", 1]]
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.18ms)
+Completed 200 OK in 92ms (Views: 1.5ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/users/5" for 127.0.0.1 at 2017-02-20 12:04:27 +0000
+  
+ActionController::RoutingError (No route matches [GET] "/users/5"):
+  
+actionpack (5.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.1) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.1) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.1) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.1) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.1) lib/rails/rack/logger.rb:24:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.1) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.1) lib/rack/sendfile.rb:111:in `call'
+rack-cors (0.4.1) lib/rack/cors.rb:81:in `call'
+railties (5.0.1) lib/rails/engine.rb:522:in `call'
+puma (3.7.0) lib/puma/configuration.rb:226:in `call'
+puma (3.7.0) lib/puma/server.rb:578:in `handle_request'
+puma (3.7.0) lib/puma/server.rb:415:in `process_client'
+puma (3.7.0) lib/puma/server.rb:275:in `block in run'
+puma (3.7.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started POST "/login" for 127.0.0.1 at 2017-02-20 12:18:05 +0000
+Processing by AuthenticationsController#login as HTML
+  Parameters: {"email"=>"zadie@smith.com", "password"=>"[FILTERED]", "authentication"=>{"email"=>"zadie@smith.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "zadie@smith.com"], ["LIMIT", 1]]
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.19ms)
+Completed 200 OK in 177ms (Views: 5.3ms | ActiveRecord: 5.2ms)
+
+
+Started GET "/users/5" for 127.0.0.1 at 2017-02-20 12:18:06 +0000
+  
+ActionController::RoutingError (No route matches [GET] "/users/5"):
+  
+actionpack (5.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.1) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.1) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.1) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.1) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.1) lib/rails/rack/logger.rb:24:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.1) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.1) lib/rack/sendfile.rb:111:in `call'
+rack-cors (0.4.1) lib/rack/cors.rb:81:in `call'
+railties (5.0.1) lib/rails/engine.rb:522:in `call'
+puma (3.7.0) lib/puma/configuration.rb:226:in `call'
+puma (3.7.0) lib/puma/server.rb:578:in `handle_request'
+puma (3.7.0) lib/puma/server.rb:415:in `process_client'
+puma (3.7.0) lib/puma/server.rb:275:in `block in run'
+puma (3.7.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/users" for 127.0.0.1 at 2017-02-20 12:23:00 +0000
+Processing by UsersController#index as */*
+  Parameters: {"email"=>"shosh@shoshanna.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "user"=>{"email"=>"shosh@shoshanna.com"}}
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.11ms)
+Filter chain halted as :authenticate_user! rendered or redirected
+Completed 401 Unauthorized in 4ms (Views: 2.8ms | ActiveRecord: 3.6ms)
+
+
+Started POST "/login" for 127.0.0.1 at 2017-02-20 12:23:07 +0000
+Processing by AuthenticationsController#login as */*
+  Parameters: {"email"=>"shosh@shoshanna.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "authentication"=>{"email"=>"shosh@shoshanna.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "shosh@shoshanna.com"], ["LIMIT", 1]]
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.18ms)
+Completed 200 OK in 109ms (Views: 0.9ms | ActiveRecord: 6.3ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2017-02-20 12:23:29 +0000
+Processing by UsersController#index as */*
+  Parameters: {"email"=>"shosh@shoshanna.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "user"=>{"email"=>"shosh@shoshanna.com"}}
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.1ms)
+Filter chain halted as :authenticate_user! rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 0.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2017-02-20 12:23:37 +0000
+Processing by UsersController#index as */*
+  Parameters: {"email"=>"shosh@shoshanna.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "user"=>{"email"=>"shosh@shoshanna.com"}}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.5ms)
+Completed 200 OK in 5ms (Views: 2.2ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/period" for 127.0.0.1 at 2017-02-20 12:23:52 +0000
+  
+ActionController::RoutingError (No route matches [GET] "/period"):
+  
+actionpack (5.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.1) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.1) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.1) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.1) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.1) lib/rails/rack/logger.rb:24:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.1) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.1) lib/rack/sendfile.rb:111:in `call'
+rack-cors (0.4.1) lib/rack/cors.rb:81:in `call'
+railties (5.0.1) lib/rails/engine.rb:522:in `call'
+puma (3.7.0) lib/puma/configuration.rb:226:in `call'
+puma (3.7.0) lib/puma/server.rb:578:in `handle_request'
+puma (3.7.0) lib/puma/server.rb:415:in `process_client'
+puma (3.7.0) lib/puma/server.rb:275:in `block in run'
+puma (3.7.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/periods" for 127.0.0.1 at 2017-02-20 12:23:56 +0000
+Processing by PeriodsController#index as */*
+  Parameters: {"email"=>"shosh@shoshanna.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "period"=>{}}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mPeriod Load (0.9ms)[0m  [1m[34mSELECT "periods".* FROM "periods"[0m
+[active_model_serializers]   [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (72.85ms)
+Completed 200 OK in 95ms (Views: 87.1ms | ActiveRecord: 10.6ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2017-02-20 12:24:04 +0000
+Processing by UsersController#index as */*
+  Parameters: {"email"=>"shosh@shoshanna.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "user"=>{"email"=>"shosh@shoshanna.com"}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.74ms)
+Completed 200 OK in 5ms (Views: 2.7ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/users/3" for 127.0.0.1 at 2017-02-20 12:24:25 +0000
+Processing by UsersController#show as */*
+  Parameters: {"email"=>"shosh@shoshanna.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "id"=>"3", "user"=>{"email"=>"shosh@shoshanna.com"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (0.13ms)
+Completed 200 OK in 3ms (Views: 0.6ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/users/1" for 127.0.0.1 at 2017-02-20 12:24:29 +0000
+Processing by UsersController#show as */*
+  Parameters: {"email"=>"shosh@shoshanna.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "id"=>"1", "user"=>{"email"=>"shosh@shoshanna.com"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (0.12ms)
+Completed 200 OK in 3ms (Views: 0.6ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/login" for 127.0.0.1 at 2017-02-20 12:24:40 +0000
+Processing by AuthenticationsController#login as HTML
+  Parameters: {"email"=>"zadie@smith.com", "password"=>"[FILTERED]", "authentication"=>{"email"=>"zadie@smith.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "zadie@smith.com"], ["LIMIT", 1]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.15ms)
+Completed 200 OK in 92ms (Views: 1.6ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/users/5" for 127.0.0.1 at 2017-02-20 12:24:40 +0000
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (0.18ms)
+Completed 200 OK in 3ms (Views: 0.7ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/login" for 127.0.0.1 at 2017-02-20 12:24:45 +0000
+Processing by AuthenticationsController#login as HTML
+  Parameters: {"email"=>"zadie@smith.com", "password"=>"[FILTERED]", "authentication"=>{"email"=>"zadie@smith.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "zadie@smith.com"], ["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.15ms)
+Completed 200 OK in 92ms (Views: 1.7ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/users/5" for 127.0.0.1 at 2017-02-20 12:24:45 +0000
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (0.13ms)
+Completed 200 OK in 3ms (Views: 0.7ms | ActiveRecord: 0.7ms)
+
+
+Started POST "/login" for 127.0.0.1 at 2017-02-20 12:24:51 +0000
+Processing by AuthenticationsController#login as HTML
+  Parameters: {"email"=>"zadie@smith.com", "password"=>"[FILTERED]", "authentication"=>{"email"=>"zadie@smith.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "zadie@smith.com"], ["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.2ms)
+Completed 200 OK in 94ms (Views: 1.7ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/users/5" for 127.0.0.1 at 2017-02-20 12:24:52 +0000
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (0.13ms)
+Completed 200 OK in 4ms (Views: 0.8ms | ActiveRecord: 0.7ms)
+
+
