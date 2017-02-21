@@ -3,7 +3,8 @@ class PeriodsController < ApplicationController
 
   # GET /periods
   def index
-    @periods = Period.all
+    @periods = current_user.periods
+    # @periods = Period.all
 
     render json: @periods
   end
@@ -15,7 +16,7 @@ class PeriodsController < ApplicationController
 
   # POST /periods
   def create
-    @period = Period.new(period_params)
+    @period = current_user.periods.new(period_params)
 
     if @period.save
       render json: @period, status: :created, location: @period
