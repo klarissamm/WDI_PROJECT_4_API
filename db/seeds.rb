@@ -6,7 +6,7 @@ User.create([
     username: "Leslie",
     email: "leslie@president.com",
     password: "password",
-    image: "http://rs869.pbsrc.com/albums/ab253/jalex_2010/leslieknope3.jpg~c200",
+    image: "http://femspotter.files.wordpress.com/2009/11/leslie.jpg",
     age: "40",
     contraception: "Pill"
   },
@@ -14,7 +14,7 @@ User.create([
     username: "Selina",
     email: "selina@veep.com",
     password: "password",
-    image: "http://img.sharetv.com/shows/characters/thumbnails/veep.selina_meyer.jpg",
+    image: "https://www.google.co.uk/url?sa=i&rct=j&q=&esrc=s&source=images&cd=&ved=0ahUKEwiw0OKXuaTSAhVJ6xQKHRDkANYQjRwIBw&url=http%3A%2F%2Fwww.glamour.com%2Fstory%2Fselina-meyer-hillary-clinton&bvm=bv.147448319,d.ZGg&psig=AFQjCNGaz79HKpOmTNoDN8hpvO-Kk7rX4w&ust=1487878419187499",
     age: "45",
     contraception: "Implant"
   },
@@ -22,7 +22,7 @@ User.create([
     username: "Shosh",
     email: "shosh@shoshanna.com",
     password: "password",
-    image: "https://hbo.co.uk/uploads/images/girls/cast/shoshanna-shapiro.jpg",
+    image: "http://www.celebitchy.com/wp-content/uploads/2013/02/wenn20151119.jpg",
     age: "27",
     contraception: "IUD"
   },
@@ -30,7 +30,7 @@ User.create([
     username: "Jessa",
     email: "jessa@jessa.com",
     password: "password",
-    image: "http://vignette4.wikia.nocookie.net/girls/images/0/0e/Jessa3.jpg/revision/latest/scale-to-width-down/350?cb=20150212015859",
+    image: "https://s-media-cache-ak0.pinimg.com/originals/0f/34/c2/0f34c244884132400e9bef7e98c3062c.jpg",
     age: "31",
     contraception: "Pill"
   }
