@@ -36290,3 +36290,1424 @@ Completed 401 Unauthorized in 6ms (Views: 1.9ms | ActiveRecord: 1.1ms)
   [1m[36mPeriod Load (0.3ms)[0m  [1m[34mSELECT  "periods".* FROM "periods" WHERE "periods"."date" = $1 LIMIT $2[0m  [["date", Sun, 05 Feb 2017], ["LIMIT", 1]]
   [1m[35mSQL (0.9ms)[0m  [1m[32mINSERT INTO "periods" ("date", "bleeding", "pain", "user_id", "created_at", "updated_at", "notes") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["date", Mon, 06 Feb 2017], ["bleeding", 1], ["pain", 1], ["user_id", 3], ["created_at", 2017-02-23 11:50:00 UTC], ["updated_at", 2017-02-23 11:50:00 UTC], ["notes", "Almost gone I think."]]
   [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+Started GET "/users/3" for 127.0.0.1 at 2017-02-23 11:51:57 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.8ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mPeriod Load (0.9ms)[0m  [1m[34mSELECT "periods".* FROM "periods" WHERE "periods"."user_id" = $1[0m  [["user_id", 3]]
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (49.1ms)
+Completed 200 OK in 106ms (Views: 55.6ms | ActiveRecord: 14.9ms)
+
+
+Started GET "/users/3" for 127.0.0.1 at 2017-02-23 11:51:57 +0000
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mPeriod Load (0.6ms)[0m  [1m[34mSELECT "periods".* FROM "periods" WHERE "periods"."user_id" = $1[0m  [["user_id", 3]]
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (11.99ms)
+Completed 200 OK in 16ms (Views: 12.4ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/periods" for 127.0.0.1 at 2017-02-23 11:52:00 +0000
+Processing by PeriodsController#index as HTML
+  [1m[36mUser Load (2.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mPeriod Load (0.6ms)[0m  [1m[34mSELECT "periods".* FROM "periods" WHERE "periods"."user_id" = $1[0m  [["user_id", 3]]
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (72.07ms)
+Completed 200 OK in 94ms (Views: 87.7ms | ActiveRecord: 2.8ms)
+
+
+Started GET "/users/3" for 127.0.0.1 at 2017-02-23 11:52:34 +0000
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mPeriod Load (0.6ms)[0m  [1m[34mSELECT "periods".* FROM "periods" WHERE "periods"."user_id" = $1[0m  [["user_id", 3]]
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (12.44ms)
+Completed 200 OK in 16ms (Views: 12.6ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/periods" for 127.0.0.1 at 2017-02-23 11:52:34 +0000
+Processing by PeriodsController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mPeriod Load (0.5ms)[0m  [1m[34mSELECT "periods".* FROM "periods" WHERE "periods"."user_id" = $1[0m  [["user_id", 3]]
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (52.27ms)
+Completed 200 OK in 58ms (Views: 55.5ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/users/3" for 127.0.0.1 at 2017-02-23 11:52:34 +0000
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mPeriod Load (1.1ms)[0m  [1m[34mSELECT "periods".* FROM "periods" WHERE "periods"."user_id" = $1[0m  [["user_id", 3]]
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (14.67ms)
+Completed 200 OK in 19ms (Views: 14.4ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/users/3" for 127.0.0.1 at 2017-02-23 11:52:42 +0000
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mPeriod Load (0.5ms)[0m  [1m[34mSELECT "periods".* FROM "periods" WHERE "periods"."user_id" = $1[0m  [["user_id", 3]]
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (14.49ms)
+Completed 200 OK in 19ms (Views: 14.9ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/users/3" for 127.0.0.1 at 2017-02-23 11:52:42 +0000
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mPeriod Load (0.5ms)[0m  [1m[34mSELECT "periods".* FROM "periods" WHERE "periods"."user_id" = $1[0m  [["user_id", 3]]
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (14.79ms)
+Completed 200 OK in 20ms (Views: 15.5ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/periods" for 127.0.0.1 at 2017-02-23 11:53:30 +0000
+Processing by PeriodsController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mPeriod Load (0.4ms)[0m  [1m[34mSELECT "periods".* FROM "periods" WHERE "periods"."user_id" = $1[0m  [["user_id", 3]]
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (76.47ms)
+Completed 200 OK in 83ms (Views: 79.6ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/users/3" for 127.0.0.1 at 2017-02-23 11:53:46 +0000
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mPeriod Load (0.4ms)[0m  [1m[34mSELECT "periods".* FROM "periods" WHERE "periods"."user_id" = $1[0m  [["user_id", 3]]
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (12.8ms)
+Completed 200 OK in 17ms (Views: 13.1ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/users/3" for 127.0.0.1 at 2017-02-23 11:53:46 +0000
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mPeriod Load (0.7ms)[0m  [1m[34mSELECT "periods".* FROM "periods" WHERE "periods"."user_id" = $1[0m  [["user_id", 3]]
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (25.82ms)
+Completed 200 OK in 34ms (Views: 26.0ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/periods" for 127.0.0.1 at 2017-02-23 11:53:49 +0000
+Processing by PeriodsController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mPeriod Load (0.4ms)[0m  [1m[34mSELECT "periods".* FROM "periods" WHERE "periods"."user_id" = $1[0m  [["user_id", 3]]
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (81.18ms)
+Completed 200 OK in 88ms (Views: 84.9ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/users/3" for 127.0.0.1 at 2017-02-23 11:54:10 +0000
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mPeriod Load (0.5ms)[0m  [1m[34mSELECT "periods".* FROM "periods" WHERE "periods"."user_id" = $1[0m  [["user_id", 3]]
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (14.11ms)
+Completed 200 OK in 19ms (Views: 14.4ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/periods" for 127.0.0.1 at 2017-02-23 11:54:10 +0000
+Processing by PeriodsController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mPeriod Load (0.4ms)[0m  [1m[34mSELECT "periods".* FROM "periods" WHERE "periods"."user_id" = $1[0m  [["user_id", 3]]
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (56.82ms)
+Completed 200 OK in 63ms (Views: 59.9ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/users/3" for 127.0.0.1 at 2017-02-23 11:54:10 +0000
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mPeriod Load (0.5ms)[0m  [1m[34mSELECT "periods".* FROM "periods" WHERE "periods"."user_id" = $1[0m  [["user_id", 3]]
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (15.2ms)
+Completed 200 OK in 19ms (Views: 15.4ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/users/3" for 127.0.0.1 at 2017-02-23 11:54:23 +0000
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mPeriod Load (3.1ms)[0m  [1m[34mSELECT "periods".* FROM "periods" WHERE "periods"."user_id" = $1[0m  [["user_id", 3]]
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (27.64ms)
+Completed 200 OK in 36ms (Views: 28.1ms | ActiveRecord: 4.7ms)
+
+
+Started GET "/users/3" for 127.0.0.1 at 2017-02-23 11:54:23 +0000
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mPeriod Load (0.5ms)[0m  [1m[34mSELECT "periods".* FROM "periods" WHERE "periods"."user_id" = $1[0m  [["user_id", 3]]
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (19.68ms)
+Completed 200 OK in 26ms (Views: 21.3ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/users/3" for 127.0.0.1 at 2017-02-23 11:54:30 +0000
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mPeriod Load (0.4ms)[0m  [1m[34mSELECT "periods".* FROM "periods" WHERE "periods"."user_id" = $1[0m  [["user_id", 3]]
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (16.27ms)
+Completed 200 OK in 22ms (Views: 16.7ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/users/3" for 127.0.0.1 at 2017-02-23 11:54:30 +0000
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mPeriod Load (6.2ms)[0m  [1m[34mSELECT "periods".* FROM "periods" WHERE "periods"."user_id" = $1[0m  [["user_id", 3]]
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (24.39ms)
+Completed 200 OK in 31ms (Views: 19.2ms | ActiveRecord: 8.1ms)
+
+
+Started GET "/periods" for 127.0.0.1 at 2017-02-23 11:54:34 +0000
+Processing by PeriodsController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mPeriod Load (0.4ms)[0m  [1m[34mSELECT "periods".* FROM "periods" WHERE "periods"."user_id" = $1[0m  [["user_id", 3]]
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (79.68ms)
+Completed 200 OK in 86ms (Views: 82.7ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/users/3" for 127.0.0.1 at 2017-02-23 11:55:10 +0000
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mPeriod Load (0.4ms)[0m  [1m[34mSELECT "periods".* FROM "periods" WHERE "periods"."user_id" = $1[0m  [["user_id", 3]]
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (11.86ms)
+Completed 200 OK in 15ms (Views: 12.1ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/periods" for 127.0.0.1 at 2017-02-23 11:55:10 +0000
+Processing by PeriodsController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mPeriod Load (0.4ms)[0m  [1m[34mSELECT "periods".* FROM "periods" WHERE "periods"."user_id" = $1[0m  [["user_id", 3]]
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (54.41ms)
+Completed 200 OK in 61ms (Views: 57.3ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/users/3" for 127.0.0.1 at 2017-02-23 11:55:11 +0000
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mUser Load (3.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mPeriod Load (5.2ms)[0m  [1m[34mSELECT "periods".* FROM "periods" WHERE "periods"."user_id" = $1[0m  [["user_id", 3]]
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (17.66ms)
+Completed 200 OK in 27ms (Views: 13.9ms | ActiveRecord: 9.7ms)
+
+
+Started GET "/periods" for 127.0.0.1 at 2017-02-23 11:55:13 +0000
+Processing by PeriodsController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mPeriod Load (0.4ms)[0m  [1m[34mSELECT "periods".* FROM "periods" WHERE "periods"."user_id" = $1[0m  [["user_id", 3]]
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (67.54ms)
+Completed 200 OK in 74ms (Views: 71.8ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/users/3" for 127.0.0.1 at 2017-02-23 11:55:34 +0000
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mPeriod Load (0.4ms)[0m  [1m[34mSELECT "periods".* FROM "periods" WHERE "periods"."user_id" = $1[0m  [["user_id", 3]]
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (9.6ms)
+Completed 200 OK in 15ms (Views: 10.0ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/users/3" for 127.0.0.1 at 2017-02-23 11:55:34 +0000
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (9.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mPeriod Load (9.1ms)[0m  [1m[34mSELECT "periods".* FROM "periods" WHERE "periods"."user_id" = $1[0m  [["user_id", 3]]
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (26.24ms)
+Completed 200 OK in 41ms (Views: 18.1ms | ActiveRecord: 20.1ms)
+
+
+Started GET "/users/3" for 127.0.0.1 at 2017-02-23 11:55:37 +0000
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mUser Load (2.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mPeriod Load (0.4ms)[0m  [1m[34mSELECT "periods".* FROM "periods" WHERE "periods"."user_id" = $1[0m  [["user_id", 3]]
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (16.05ms)
+Completed 200 OK in 23ms (Views: 16.8ms | ActiveRecord: 3.2ms)
+
+
+Started GET "/periods" for 127.0.0.1 at 2017-02-23 11:55:39 +0000
+Processing by PeriodsController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mPeriod Load (0.4ms)[0m  [1m[34mSELECT "periods".* FROM "periods" WHERE "periods"."user_id" = $1[0m  [["user_id", 3]]
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (67.34ms)
+Completed 200 OK in 74ms (Views: 70.8ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/users/3" for 127.0.0.1 at 2017-02-23 11:55:52 +0000
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mPeriod Load (0.4ms)[0m  [1m[34mSELECT "periods".* FROM "periods" WHERE "periods"."user_id" = $1[0m  [["user_id", 3]]
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (9.99ms)
+Completed 200 OK in 13ms (Views: 10.3ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/periods" for 127.0.0.1 at 2017-02-23 11:55:52 +0000
+Processing by PeriodsController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mPeriod Load (2.2ms)[0m  [1m[34mSELECT "periods".* FROM "periods" WHERE "periods"."user_id" = $1[0m  [["user_id", 3]]
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (44.41ms)
+Completed 200 OK in 54ms (Views: 48.8ms | ActiveRecord: 2.6ms)
+
+
+Started GET "/users/3" for 127.0.0.1 at 2017-02-23 11:55:52 +0000
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (30.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mPeriod Load (0.5ms)[0m  [1m[34mSELECT "periods".* FROM "periods" WHERE "periods"."user_id" = $1[0m  [["user_id", 3]]
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (12.92ms)
+Completed 200 OK in 48ms (Views: 13.2ms | ActiveRecord: 31.8ms)
+
+
+Started GET "/periods" for 127.0.0.1 at 2017-02-23 11:55:54 +0000
+Processing by PeriodsController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mPeriod Load (0.5ms)[0m  [1m[34mSELECT "periods".* FROM "periods" WHERE "periods"."user_id" = $1[0m  [["user_id", 3]]
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (68.77ms)
+Completed 200 OK in 77ms (Views: 72.9ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/users/3" for 127.0.0.1 at 2017-02-23 11:59:30 +0000
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mPeriod Load (0.5ms)[0m  [1m[34mSELECT "periods".* FROM "periods" WHERE "periods"."user_id" = $1[0m  [["user_id", 3]]
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (12.41ms)
+Completed 200 OK in 18ms (Views: 13.5ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/users/3" for 127.0.0.1 at 2017-02-23 11:59:30 +0000
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mPeriod Load (0.5ms)[0m  [1m[34mSELECT "periods".* FROM "periods" WHERE "periods"."user_id" = $1[0m  [["user_id", 3]]
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (14.47ms)
+Completed 200 OK in 18ms (Views: 14.9ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/periods" for 127.0.0.1 at 2017-02-23 11:59:36 +0000
+Processing by PeriodsController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mPeriod Load (0.5ms)[0m  [1m[34mSELECT "periods".* FROM "periods" WHERE "periods"."user_id" = $1[0m  [["user_id", 3]]
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (64.76ms)
+Completed 200 OK in 71ms (Views: 68.0ms | ActiveRecord: 0.8ms)
+
+
+Started POST "/periods" for 127.0.0.1 at 2017-02-23 11:59:48 +0000
+Processing by PeriodsController#create as HTML
+  Parameters: {"period"=>{"date"=>"2017-02-01T00:00:00.000Z", "pain"=>"2", "bleeding"=>"2", "notes"=>"s"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPeriod Load (0.5ms)[0m  [1m[34mSELECT  "periods".* FROM "periods" WHERE "periods"."date" = $1 LIMIT $2[0m  [["date", Tue, 31 Jan 2017], ["LIMIT", 1]]
+  [1m[35mSQL (1.1ms)[0m  [1m[32mINSERT INTO "periods" ("date", "bleeding", "pain", "user_id", "created_at", "updated_at", "notes") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["date", Wed, 01 Feb 2017], ["bleeding", 2], ["pain", 2], ["user_id", 3], ["created_at", 2017-02-23 11:59:48 UTC], ["updated_at", 2017-02-23 11:59:48 UTC], ["notes", "s"]]
+  [1m[35m (2.3ms)[0m  [1m[35mCOMMIT[0m
+[active_model_serializers]   [1m[36mPeriod Load (0.3ms)[0m  [1m[34mSELECT "periods".* FROM "periods" WHERE "periods"."user_id" = $1[0m  [["user_id", 3]]
+[active_model_serializers] Rendered PeriodSerializer with ActiveModelSerializers::Adapter::Attributes (10.99ms)
+Completed 201 Created in 30ms (Views: 12.3ms | ActiveRecord: 4.7ms)
+
+
+Started POST "/periods" for 127.0.0.1 at 2017-02-23 11:59:57 +0000
+Processing by PeriodsController#create as HTML
+  Parameters: {"period"=>{"date"=>"2017-02-22T00:00:00.000Z", "pain"=>"4", "bleeding"=>"2", "notes"=>"ssss"}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPeriod Load (1.4ms)[0m  [1m[34mSELECT  "periods".* FROM "periods" WHERE "periods"."date" = $1 LIMIT $2[0m  [["date", Tue, 21 Feb 2017], ["LIMIT", 1]]
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "periods" ("date", "bleeding", "pain", "user_id", "created_at", "updated_at", "notes") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["date", Wed, 22 Feb 2017], ["bleeding", 2], ["pain", 4], ["user_id", 3], ["created_at", 2017-02-23 11:59:57 UTC], ["updated_at", 2017-02-23 11:59:57 UTC], ["notes", "ssss"]]
+  [1m[35m (2.5ms)[0m  [1m[35mCOMMIT[0m
+[active_model_serializers]   [1m[36mPeriod Load (0.3ms)[0m  [1m[34mSELECT "periods".* FROM "periods" WHERE "periods"."user_id" = $1[0m  [["user_id", 3]]
+[active_model_serializers] Rendered PeriodSerializer with ActiveModelSerializers::Adapter::Attributes (9.66ms)
+Completed 201 Created in 24ms (Views: 10.1ms | ActiveRecord: 5.5ms)
+
+
+Started GET "/users/3" for 127.0.0.1 at 2017-02-23 12:00:55 +0000
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mPeriod Load (0.4ms)[0m  [1m[34mSELECT "periods".* FROM "periods" WHERE "periods"."user_id" = $1[0m  [["user_id", 3]]
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (12.68ms)
+Completed 200 OK in 16ms (Views: 13.1ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/periods" for 127.0.0.1 at 2017-02-23 12:00:55 +0000
+Processing by PeriodsController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mPeriod Load (0.4ms)[0m  [1m[34mSELECT "periods".* FROM "periods" WHERE "periods"."user_id" = $1[0m  [["user_id", 3]]
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (70.58ms)
+Completed 200 OK in 77ms (Views: 73.8ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/users/3" for 127.0.0.1 at 2017-02-23 12:00:55 +0000
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (5.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mPeriod Load (0.5ms)[0m  [1m[34mSELECT "periods".* FROM "periods" WHERE "periods"."user_id" = $1[0m  [["user_id", 3]]
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (16.34ms)
+Completed 200 OK in 39ms (Views: 16.9ms | ActiveRecord: 7.6ms)
+
+
+Started GET "/users/3" for 127.0.0.1 at 2017-02-23 12:01:13 +0000
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mPeriod Load (0.5ms)[0m  [1m[34mSELECT "periods".* FROM "periods" WHERE "periods"."user_id" = $1[0m  [["user_id", 3]]
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (15.09ms)
+Completed 200 OK in 19ms (Views: 15.2ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/users/3" for 127.0.0.1 at 2017-02-23 12:01:13 +0000
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (1.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mPeriod Load (1.4ms)[0m  [1m[34mSELECT "periods".* FROM "periods" WHERE "periods"."user_id" = $1[0m  [["user_id", 3]]
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (16.29ms)
+Completed 200 OK in 23ms (Views: 15.9ms | ActiveRecord: 3.8ms)
+
+
+Started GET "/users/3" for 127.0.0.1 at 2017-02-23 12:01:47 +0000
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mPeriod Load (0.5ms)[0m  [1m[34mSELECT "periods".* FROM "periods" WHERE "periods"."user_id" = $1[0m  [["user_id", 3]]
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (16.04ms)
+Completed 200 OK in 19ms (Views: 16.3ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/users/3" for 127.0.0.1 at 2017-02-23 12:01:47 +0000
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mPeriod Load (0.4ms)[0m  [1m[34mSELECT "periods".* FROM "periods" WHERE "periods"."user_id" = $1[0m  [["user_id", 3]]
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (13.71ms)
+Completed 200 OK in 19ms (Views: 15.5ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/users/3" for 127.0.0.1 at 2017-02-23 12:02:13 +0000
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mPeriod Load (0.4ms)[0m  [1m[34mSELECT "periods".* FROM "periods" WHERE "periods"."user_id" = $1[0m  [["user_id", 3]]
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (7.38ms)
+Completed 200 OK in 10ms (Views: 7.6ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/users/3" for 127.0.0.1 at 2017-02-23 12:02:13 +0000
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mPeriod Load (0.4ms)[0m  [1m[34mSELECT "periods".* FROM "periods" WHERE "periods"."user_id" = $1[0m  [["user_id", 3]]
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (7.98ms)
+Completed 200 OK in 11ms (Views: 8.2ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/users/3" for 127.0.0.1 at 2017-02-23 12:02:28 +0000
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mPeriod Load (0.5ms)[0m  [1m[34mSELECT "periods".* FROM "periods" WHERE "periods"."user_id" = $1[0m  [["user_id", 3]]
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (13.12ms)
+Completed 200 OK in 16ms (Views: 13.3ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/users/3" for 127.0.0.1 at 2017-02-23 12:02:28 +0000
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mPeriod Load (0.4ms)[0m  [1m[34mSELECT "periods".* FROM "periods" WHERE "periods"."user_id" = $1[0m  [["user_id", 3]]
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (7.9ms)
+Completed 200 OK in 11ms (Views: 8.1ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/users/3" for 127.0.0.1 at 2017-02-23 12:02:34 +0000
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mPeriod Load (0.4ms)[0m  [1m[34mSELECT "periods".* FROM "periods" WHERE "periods"."user_id" = $1[0m  [["user_id", 3]]
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (14.38ms)
+Completed 200 OK in 19ms (Views: 14.8ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/users/3" for 127.0.0.1 at 2017-02-23 12:02:34 +0000
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mPeriod Load (0.5ms)[0m  [1m[34mSELECT "periods".* FROM "periods" WHERE "periods"."user_id" = $1[0m  [["user_id", 3]]
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (10.89ms)
+Completed 200 OK in 15ms (Views: 11.2ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/users/3" for 127.0.0.1 at 2017-02-23 12:03:23 +0000
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mPeriod Load (0.6ms)[0m  [1m[34mSELECT "periods".* FROM "periods" WHERE "periods"."user_id" = $1[0m  [["user_id", 3]]
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (15.23ms)
+Completed 200 OK in 18ms (Views: 15.3ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/users/3" for 127.0.0.1 at 2017-02-23 12:03:23 +0000
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mPeriod Load (0.8ms)[0m  [1m[34mSELECT "periods".* FROM "periods" WHERE "periods"."user_id" = $1[0m  [["user_id", 3]]
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (20.36ms)
+Completed 200 OK in 25ms (Views: 20.5ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/users/3" for 127.0.0.1 at 2017-02-23 12:03:28 +0000
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mPeriod Load (0.4ms)[0m  [1m[34mSELECT "periods".* FROM "periods" WHERE "periods"."user_id" = $1[0m  [["user_id", 3]]
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (11.89ms)
+Completed 200 OK in 15ms (Views: 12.1ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/users/3" for 127.0.0.1 at 2017-02-23 12:03:28 +0000
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mPeriod Load (0.4ms)[0m  [1m[34mSELECT "periods".* FROM "periods" WHERE "periods"."user_id" = $1[0m  [["user_id", 3]]
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (7.4ms)
+Completed 200 OK in 11ms (Views: 8.0ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/users/3" for 127.0.0.1 at 2017-02-23 12:03:33 +0000
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mPeriod Load (0.4ms)[0m  [1m[34mSELECT "periods".* FROM "periods" WHERE "periods"."user_id" = $1[0m  [["user_id", 3]]
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (14.15ms)
+Completed 200 OK in 18ms (Views: 14.6ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/users/3" for 127.0.0.1 at 2017-02-23 12:03:33 +0000
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mPeriod Load (0.5ms)[0m  [1m[34mSELECT "periods".* FROM "periods" WHERE "periods"."user_id" = $1[0m  [["user_id", 3]]
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (12.9ms)
+Completed 200 OK in 17ms (Views: 13.4ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/users/3" for 127.0.0.1 at 2017-02-23 12:04:51 +0000
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mPeriod Load (0.8ms)[0m  [1m[34mSELECT "periods".* FROM "periods" WHERE "periods"."user_id" = $1[0m  [["user_id", 3]]
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (15.37ms)
+Completed 200 OK in 20ms (Views: 15.4ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/users/3" for 127.0.0.1 at 2017-02-23 12:04:51 +0000
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mPeriod Load (0.4ms)[0m  [1m[34mSELECT "periods".* FROM "periods" WHERE "periods"."user_id" = $1[0m  [["user_id", 3]]
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (8.69ms)
+Completed 200 OK in 12ms (Views: 8.8ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/users/3" for 127.0.0.1 at 2017-02-23 12:05:44 +0000
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mPeriod Load (0.5ms)[0m  [1m[34mSELECT "periods".* FROM "periods" WHERE "periods"."user_id" = $1[0m  [["user_id", 3]]
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (14.68ms)
+Completed 200 OK in 19ms (Views: 15.0ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/users/3" for 127.0.0.1 at 2017-02-23 12:05:44 +0000
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mPeriod Load (0.4ms)[0m  [1m[34mSELECT "periods".* FROM "periods" WHERE "periods"."user_id" = $1[0m  [["user_id", 3]]
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (15.69ms)
+Completed 200 OK in 19ms (Views: 16.0ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/users/3" for 127.0.0.1 at 2017-02-23 12:07:31 +0000
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mPeriod Load (0.5ms)[0m  [1m[34mSELECT "periods".* FROM "periods" WHERE "periods"."user_id" = $1[0m  [["user_id", 3]]
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (14.02ms)
+Completed 200 OK in 18ms (Views: 14.4ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/users/3" for 127.0.0.1 at 2017-02-23 12:07:31 +0000
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mPeriod Load (0.5ms)[0m  [1m[34mSELECT "periods".* FROM "periods" WHERE "periods"."user_id" = $1[0m  [["user_id", 3]]
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (8.97ms)
+Completed 200 OK in 13ms (Views: 9.3ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/users/3" for 127.0.0.1 at 2017-02-23 12:09:00 +0000
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mPeriod Load (0.4ms)[0m  [1m[34mSELECT "periods".* FROM "periods" WHERE "periods"."user_id" = $1[0m  [["user_id", 3]]
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (11.56ms)
+Completed 200 OK in 15ms (Views: 12.0ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/users/3" for 127.0.0.1 at 2017-02-23 12:09:00 +0000
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mPeriod Load (0.4ms)[0m  [1m[34mSELECT "periods".* FROM "periods" WHERE "periods"."user_id" = $1[0m  [["user_id", 3]]
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (7.72ms)
+Completed 200 OK in 10ms (Views: 7.9ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/users/3" for 127.0.0.1 at 2017-02-23 12:09:03 +0000
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mPeriod Load (0.5ms)[0m  [1m[34mSELECT "periods".* FROM "periods" WHERE "periods"."user_id" = $1[0m  [["user_id", 3]]
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (15.44ms)
+Completed 200 OK in 22ms (Views: 15.8ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/users/3" for 127.0.0.1 at 2017-02-23 12:09:03 +0000
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mPeriod Load (0.4ms)[0m  [1m[34mSELECT "periods".* FROM "periods" WHERE "periods"."user_id" = $1[0m  [["user_id", 3]]
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (9.24ms)
+Completed 200 OK in 14ms (Views: 9.6ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/users/3" for 127.0.0.1 at 2017-02-23 12:09:28 +0000
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mPeriod Load (0.4ms)[0m  [1m[34mSELECT "periods".* FROM "periods" WHERE "periods"."user_id" = $1[0m  [["user_id", 3]]
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (10.65ms)
+Completed 200 OK in 14ms (Views: 11.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/users/3" for 127.0.0.1 at 2017-02-23 12:09:28 +0000
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mPeriod Load (0.4ms)[0m  [1m[34mSELECT "periods".* FROM "periods" WHERE "periods"."user_id" = $1[0m  [["user_id", 3]]
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (13.35ms)
+Completed 200 OK in 17ms (Views: 13.6ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/users/3" for 127.0.0.1 at 2017-02-23 12:09:40 +0000
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mPeriod Load (0.4ms)[0m  [1m[34mSELECT "periods".* FROM "periods" WHERE "periods"."user_id" = $1[0m  [["user_id", 3]]
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (16.11ms)
+Completed 200 OK in 20ms (Views: 16.4ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/users/3" for 127.0.0.1 at 2017-02-23 12:09:40 +0000
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mPeriod Load (0.4ms)[0m  [1m[34mSELECT "periods".* FROM "periods" WHERE "periods"."user_id" = $1[0m  [["user_id", 3]]
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (9.65ms)
+Completed 200 OK in 15ms (Views: 10.3ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/users/3" for 127.0.0.1 at 2017-02-23 12:09:41 +0000
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mPeriod Load (3.5ms)[0m  [1m[34mSELECT "periods".* FROM "periods" WHERE "periods"."user_id" = $1[0m  [["user_id", 3]]
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (17.02ms)
+Completed 200 OK in 22ms (Views: 14.5ms | ActiveRecord: 4.5ms)
+
+
+Started GET "/users/3" for 127.0.0.1 at 2017-02-23 12:09:41 +0000
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mPeriod Load (0.5ms)[0m  [1m[34mSELECT "periods".* FROM "periods" WHERE "periods"."user_id" = $1[0m  [["user_id", 3]]
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (20.71ms)
+Completed 200 OK in 25ms (Views: 21.0ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/users/3" for 127.0.0.1 at 2017-02-23 12:09:47 +0000
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mPeriod Load (0.7ms)[0m  [1m[34mSELECT "periods".* FROM "periods" WHERE "periods"."user_id" = $1[0m  [["user_id", 3]]
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (13.1ms)
+Completed 200 OK in 17ms (Views: 13.3ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/users/3" for 127.0.0.1 at 2017-02-23 12:09:47 +0000
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mPeriod Load (0.5ms)[0m  [1m[34mSELECT "periods".* FROM "periods" WHERE "periods"."user_id" = $1[0m  [["user_id", 3]]
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (23.2ms)
+Completed 200 OK in 28ms (Views: 23.7ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/users/3" for 127.0.0.1 at 2017-02-23 12:09:59 +0000
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mPeriod Load (1.7ms)[0m  [1m[34mSELECT "periods".* FROM "periods" WHERE "periods"."user_id" = $1[0m  [["user_id", 3]]
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (18.61ms)
+Completed 200 OK in 24ms (Views: 17.8ms | ActiveRecord: 3.2ms)
+
+
+Started GET "/users/3" for 127.0.0.1 at 2017-02-23 12:09:59 +0000
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mUser Load (1.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mPeriod Load (0.9ms)[0m  [1m[34mSELECT "periods".* FROM "periods" WHERE "periods"."user_id" = $1[0m  [["user_id", 3]]
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (45.61ms)
+Completed 200 OK in 52ms (Views: 46.5ms | ActiveRecord: 3.1ms)
+
+
+Started GET "/users/3" for 127.0.0.1 at 2017-02-23 12:11:33 +0000
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mPeriod Load (2.3ms)[0m  [1m[34mSELECT "periods".* FROM "periods" WHERE "periods"."user_id" = $1[0m  [["user_id", 3]]
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (16.1ms)
+Completed 200 OK in 20ms (Views: 14.7ms | ActiveRecord: 2.9ms)
+
+
+Started GET "/users/3" for 127.0.0.1 at 2017-02-23 12:11:33 +0000
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mPeriod Load (0.5ms)[0m  [1m[34mSELECT "periods".* FROM "periods" WHERE "periods"."user_id" = $1[0m  [["user_id", 3]]
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (12.13ms)
+Completed 200 OK in 16ms (Views: 12.5ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/users/3" for 127.0.0.1 at 2017-02-23 12:13:25 +0000
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mPeriod Load (0.5ms)[0m  [1m[34mSELECT "periods".* FROM "periods" WHERE "periods"."user_id" = $1[0m  [["user_id", 3]]
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (10.45ms)
+Completed 200 OK in 16ms (Views: 10.9ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/users/3" for 127.0.0.1 at 2017-02-23 12:13:25 +0000
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mPeriod Load (0.4ms)[0m  [1m[34mSELECT "periods".* FROM "periods" WHERE "periods"."user_id" = $1[0m  [["user_id", 3]]
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (8.28ms)
+Completed 200 OK in 13ms (Views: 8.6ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/users/3" for 127.0.0.1 at 2017-02-23 12:13:29 +0000
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mPeriod Load (0.5ms)[0m  [1m[34mSELECT "periods".* FROM "periods" WHERE "periods"."user_id" = $1[0m  [["user_id", 3]]
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (14.57ms)
+Completed 200 OK in 18ms (Views: 14.8ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/users/3" for 127.0.0.1 at 2017-02-23 12:13:29 +0000
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mPeriod Load (0.9ms)[0m  [1m[34mSELECT "periods".* FROM "periods" WHERE "periods"."user_id" = $1[0m  [["user_id", 3]]
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (39.92ms)
+Completed 200 OK in 50ms (Views: 39.9ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/users/3" for 127.0.0.1 at 2017-02-23 12:13:41 +0000
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mPeriod Load (0.4ms)[0m  [1m[34mSELECT "periods".* FROM "periods" WHERE "periods"."user_id" = $1[0m  [["user_id", 3]]
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (10.15ms)
+Completed 200 OK in 14ms (Views: 10.4ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/users/3" for 127.0.0.1 at 2017-02-23 12:13:41 +0000
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mPeriod Load (0.4ms)[0m  [1m[34mSELECT "periods".* FROM "periods" WHERE "periods"."user_id" = $1[0m  [["user_id", 3]]
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (7.84ms)
+Completed 200 OK in 12ms (Views: 8.2ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/users/3" for 127.0.0.1 at 2017-02-23 12:13:48 +0000
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mPeriod Load (0.5ms)[0m  [1m[34mSELECT "periods".* FROM "periods" WHERE "periods"."user_id" = $1[0m  [["user_id", 3]]
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (14.46ms)
+Completed 200 OK in 19ms (Views: 14.8ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/users/3" for 127.0.0.1 at 2017-02-23 12:13:48 +0000
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mPeriod Load (7.4ms)[0m  [1m[34mSELECT "periods".* FROM "periods" WHERE "periods"."user_id" = $1[0m  [["user_id", 3]]
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (32.46ms)
+Completed 200 OK in 37ms (Views: 26.0ms | ActiveRecord: 8.2ms)
+
+
+Started GET "/users/3" for 127.0.0.1 at 2017-02-23 12:14:21 +0000
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mPeriod Load (0.4ms)[0m  [1m[34mSELECT "periods".* FROM "periods" WHERE "periods"."user_id" = $1[0m  [["user_id", 3]]
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (11.96ms)
+Completed 200 OK in 17ms (Views: 13.6ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/users/3" for 127.0.0.1 at 2017-02-23 12:14:21 +0000
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mPeriod Load (0.4ms)[0m  [1m[34mSELECT "periods".* FROM "periods" WHERE "periods"."user_id" = $1[0m  [["user_id", 3]]
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (9.31ms)
+Completed 200 OK in 12ms (Views: 9.6ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/users/3" for 127.0.0.1 at 2017-02-23 12:14:53 +0000
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mPeriod Load (0.4ms)[0m  [1m[34mSELECT "periods".* FROM "periods" WHERE "periods"."user_id" = $1[0m  [["user_id", 3]]
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (12.48ms)
+Completed 200 OK in 15ms (Views: 12.7ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/users/3" for 127.0.0.1 at 2017-02-23 12:14:53 +0000
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mPeriod Load (0.5ms)[0m  [1m[34mSELECT "periods".* FROM "periods" WHERE "periods"."user_id" = $1[0m  [["user_id", 3]]
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (47.43ms)
+Completed 200 OK in 58ms (Views: 50.9ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/users/3" for 127.0.0.1 at 2017-02-23 12:15:43 +0000
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mPeriod Load (0.4ms)[0m  [1m[34mSELECT "periods".* FROM "periods" WHERE "periods"."user_id" = $1[0m  [["user_id", 3]]
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (12.87ms)
+Completed 200 OK in 16ms (Views: 13.2ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/users/3" for 127.0.0.1 at 2017-02-23 12:15:43 +0000
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mPeriod Load (0.6ms)[0m  [1m[34mSELECT "periods".* FROM "periods" WHERE "periods"."user_id" = $1[0m  [["user_id", 3]]
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (8.24ms)
+Completed 200 OK in 11ms (Views: 8.3ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/contacts" for 127.0.0.1 at 2017-02-23 12:15:44 +0000
+Processing by ContactsController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mContact Load (0.7ms)[0m  [1m[34mSELECT "contacts".* FROM "contacts" WHERE "contacts"."user_id" = $1[0m  [["user_id", 3]]
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.14ms)
+Completed 200 OK in 14ms (Views: 3.1ms | ActiveRecord: 3.4ms)
+
+
+Started GET "/users/3" for 127.0.0.1 at 2017-02-23 12:15:46 +0000
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mPeriod Load (1.9ms)[0m  [1m[34mSELECT "periods".* FROM "periods" WHERE "periods"."user_id" = $1[0m  [["user_id", 3]]
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (19.13ms)
+Completed 200 OK in 24ms (Views: 18.2ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/contacts" for 127.0.0.1 at 2017-02-23 12:15:46 +0000
+Processing by ContactsController#index as HTML
+  [1m[36mUser Load (1.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mContact Load (2.8ms)[0m  [1m[34mSELECT "contacts".* FROM "contacts" WHERE "contacts"."user_id" = $1[0m  [["user_id", 3]]
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.1ms)
+Completed 200 OK in 10ms (Views: 1.9ms | ActiveRecord: 4.5ms)
+
+
+Started GET "/users/3" for 127.0.0.1 at 2017-02-23 12:15:46 +0000
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (3.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mUser Load (10.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mPeriod Load (15.0ms)[0m  [1m[34mSELECT "periods".* FROM "periods" WHERE "periods"."user_id" = $1[0m  [["user_id", 3]]
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (34.84ms)
+Completed 200 OK in 53ms (Views: 20.9ms | ActiveRecord: 28.3ms)
+
+
+Started GET "/contacts" for 127.0.0.1 at 2017-02-23 12:16:48 +0000
+Processing by ContactsController#index as */*
+  Parameters: {"email"=>"shosh@shoshanna.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "contact"=>{"email"=>"shosh@shoshanna.com"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mContact Load (0.4ms)[0m  [1m[34mSELECT "contacts".* FROM "contacts" WHERE "contacts"."user_id" = $1[0m  [["user_id", 3]]
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.1ms)
+Completed 200 OK in 24ms (Views: 3.5ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/contacts/new" for 127.0.0.1 at 2017-02-23 12:16:52 +0000
+Processing by ContactsController#show as */*
+  Parameters: {"email"=>"shosh@shoshanna.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "id"=>"new", "contact"=>{"email"=>"shosh@shoshanna.com"}}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mContact Load (0.5ms)[0m  [1m[34mSELECT  "contacts".* FROM "contacts" WHERE "contacts"."user_id" = $1 AND "contacts"."id" = $2 LIMIT $3[0m  [["user_id", 3], ["id", 0], ["LIMIT", 1]]
+Completed 404 Not Found in 13ms (ActiveRecord: 7.6ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Contact with 'id'=new [WHERE "contacts"."user_id" = $1]):
+  
+app/controllers/contacts_controller.rb:43:in `set_contact'
+Started GET "/contacts/new" for 127.0.0.1 at 2017-02-23 12:16:55 +0000
+Processing by ContactsController#show as */*
+  Parameters: {"id"=>"new", "contact"=>{}}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mContact Load (0.6ms)[0m  [1m[34mSELECT  "contacts".* FROM "contacts" WHERE "contacts"."user_id" = $1 AND "contacts"."id" = $2 LIMIT $3[0m  [["user_id", 3], ["id", 0], ["LIMIT", 1]]
+Completed 404 Not Found in 4ms (ActiveRecord: 1.1ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Contact with 'id'=new [WHERE "contacts"."user_id" = $1]):
+  
+app/controllers/contacts_controller.rb:43:in `set_contact'
+Started POST "/contacts/new" for 127.0.0.1 at 2017-02-23 12:17:15 +0000
+  
+ActionController::RoutingError (No route matches [POST] "/contacts/new"):
+  
+actionpack (5.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.1) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.1) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.1) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.1) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.1) lib/rails/rack/logger.rb:24:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.1) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.1) lib/rack/sendfile.rb:111:in `call'
+rack-cors (0.4.1) lib/rack/cors.rb:81:in `call'
+railties (5.0.1) lib/rails/engine.rb:522:in `call'
+puma (3.7.0) lib/puma/configuration.rb:226:in `call'
+puma (3.7.0) lib/puma/server.rb:578:in `handle_request'
+puma (3.7.0) lib/puma/server.rb:415:in `process_client'
+puma (3.7.0) lib/puma/server.rb:275:in `block in run'
+puma (3.7.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started POST "/contacts/" for 127.0.0.1 at 2017-02-23 12:17:18 +0000
+Processing by ContactsController#create as */*
+  Parameters: {"contact"=>{}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+Completed 400 Bad Request in 3ms (ActiveRecord: 0.3ms)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: contact):
+  
+app/controllers/contacts_controller.rb:48:in `contact_params'
+app/controllers/contacts_controller.rb:17:in `create'
+Started GET "/periods" for 127.0.0.1 at 2017-02-23 12:17:58 +0000
+Processing by PeriodsController#index as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mPeriod Load (1.0ms)[0m  [1m[34mSELECT "periods".* FROM "periods" WHERE "periods"."user_id" = $1[0m  [["user_id", 3]]
+[active_model_serializers]   [1m[36mContact Load (0.8ms)[0m  [1m[34mSELECT "contacts".* FROM "contacts" WHERE "contacts"."user_id" = $1[0m  [["user_id", 3]]
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (99.07ms)
+Completed 200 OK in 159ms (Views: 120.7ms | ActiveRecord: 15.0ms)
+
+
+Started GET "/contacts" for 127.0.0.1 at 2017-02-23 12:17:59 +0000
+Processing by ContactsController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mContact Load (0.4ms)[0m  [1m[34mSELECT "contacts".* FROM "contacts" WHERE "contacts"."user_id" = $1[0m  [["user_id", 3]]
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.11ms)
+Completed 200 OK in 7ms (Views: 2.7ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/users/3" for 127.0.0.1 at 2017-02-23 12:18:57 +0000
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mPeriod Load (0.6ms)[0m  [1m[34mSELECT "periods".* FROM "periods" WHERE "periods"."user_id" = $1[0m  [["user_id", 3]]
+[active_model_serializers]   [1m[36mContact Load (0.5ms)[0m  [1m[34mSELECT "contacts".* FROM "contacts" WHERE "contacts"."user_id" = $1[0m  [["user_id", 3]]
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (16.25ms)
+Completed 200 OK in 21ms (Views: 16.0ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/contacts" for 127.0.0.1 at 2017-02-23 12:18:57 +0000
+Processing by ContactsController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mContact Load (0.5ms)[0m  [1m[34mSELECT "contacts".* FROM "contacts" WHERE "contacts"."user_id" = $1[0m  [["user_id", 3]]
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.08ms)
+Completed 200 OK in 8ms (Views: 2.6ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/users/3" for 127.0.0.1 at 2017-02-23 12:18:57 +0000
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (10.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mPeriod Load (0.9ms)[0m  [1m[34mSELECT "periods".* FROM "periods" WHERE "periods"."user_id" = $1[0m  [["user_id", 3]]
+[active_model_serializers]   [1m[36mContact Load (0.5ms)[0m  [1m[34mSELECT "contacts".* FROM "contacts" WHERE "contacts"."user_id" = $1[0m  [["user_id", 3]]
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (18.31ms)
+Completed 200 OK in 33ms (Views: 17.7ms | ActiveRecord: 12.4ms)
+
+
+Started GET "/users/3" for 127.0.0.1 at 2017-02-23 12:19:20 +0000
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mPeriod Load (0.4ms)[0m  [1m[34mSELECT "periods".* FROM "periods" WHERE "periods"."user_id" = $1[0m  [["user_id", 3]]
+[active_model_serializers]   [1m[36mContact Load (0.4ms)[0m  [1m[34mSELECT "contacts".* FROM "contacts" WHERE "contacts"."user_id" = $1[0m  [["user_id", 3]]
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (13.98ms)
+Completed 200 OK in 17ms (Views: 13.8ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/users/3" for 127.0.0.1 at 2017-02-23 12:19:21 +0000
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mPeriod Load (0.6ms)[0m  [1m[34mSELECT "periods".* FROM "periods" WHERE "periods"."user_id" = $1[0m  [["user_id", 3]]
+[active_model_serializers]   [1m[36mContact Load (0.4ms)[0m  [1m[34mSELECT "contacts".* FROM "contacts" WHERE "contacts"."user_id" = $1[0m  [["user_id", 3]]
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (11.17ms)
+Completed 200 OK in 15ms (Views: 10.8ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/users/3" for 127.0.0.1 at 2017-02-23 12:19:23 +0000
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mPeriod Load (0.4ms)[0m  [1m[34mSELECT "periods".* FROM "periods" WHERE "periods"."user_id" = $1[0m  [["user_id", 3]]
+[active_model_serializers]   [1m[36mContact Load (0.5ms)[0m  [1m[34mSELECT "contacts".* FROM "contacts" WHERE "contacts"."user_id" = $1[0m  [["user_id", 3]]
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (15.79ms)
+Completed 200 OK in 19ms (Views: 15.6ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/users/3" for 127.0.0.1 at 2017-02-23 12:19:23 +0000
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mPeriod Load (0.6ms)[0m  [1m[34mSELECT "periods".* FROM "periods" WHERE "periods"."user_id" = $1[0m  [["user_id", 3]]
+[active_model_serializers]   [1m[36mContact Load (0.4ms)[0m  [1m[34mSELECT "contacts".* FROM "contacts" WHERE "contacts"."user_id" = $1[0m  [["user_id", 3]]
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (14.34ms)
+Completed 200 OK in 19ms (Views: 14.2ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/users/3" for 127.0.0.1 at 2017-02-23 12:19:40 +0000
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mPeriod Load (0.4ms)[0m  [1m[34mSELECT "periods".* FROM "periods" WHERE "periods"."user_id" = $1[0m  [["user_id", 3]]
+[active_model_serializers]   [1m[36mContact Load (0.4ms)[0m  [1m[34mSELECT "contacts".* FROM "contacts" WHERE "contacts"."user_id" = $1[0m  [["user_id", 3]]
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (14.09ms)
+Completed 200 OK in 18ms (Views: 14.0ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/users/3" for 127.0.0.1 at 2017-02-23 12:19:40 +0000
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mPeriod Load (1.2ms)[0m  [1m[34mSELECT "periods".* FROM "periods" WHERE "periods"."user_id" = $1[0m  [["user_id", 3]]
+[active_model_serializers]   [1m[36mContact Load (0.4ms)[0m  [1m[34mSELECT "contacts".* FROM "contacts" WHERE "contacts"."user_id" = $1[0m  [["user_id", 3]]
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (11.56ms)
+Completed 200 OK in 16ms (Views: 10.8ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/contacts" for 127.0.0.1 at 2017-02-23 12:19:41 +0000
+Processing by ContactsController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mContact Load (0.4ms)[0m  [1m[34mSELECT "contacts".* FROM "contacts" WHERE "contacts"."user_id" = $1[0m  [["user_id", 3]]
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.11ms)
+Completed 200 OK in 7ms (Views: 2.7ms | ActiveRecord: 0.7ms)
+
+
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", :environment]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", :environment]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", :environment]]
+  [1m[35m (5141.4ms)[0m  [1m[35mDROP DATABASE IF EXISTS "wdi-project-4-api_development"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", :environment]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", :environment]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", :environment]]
+  [1m[35m (130.1ms)[0m  [1m[35mDROP DATABASE IF EXISTS "wdi-project-4-api_development"[0m
+  [1m[35m (127.3ms)[0m  [1m[35mDROP DATABASE IF EXISTS "wdi-project-4-api_test"[0m
+  [1m[35m (483.3ms)[0m  [1m[35mCREATE DATABASE "wdi-project-4-api_development" ENCODING = 'unicode'[0m
+  [1m[35m (447.0ms)[0m  [1m[35mCREATE DATABASE "wdi-project-4-api_test" ENCODING = 'unicode'[0m
+  [1m[35m (10.8ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying PRIMARY KEY)[0m
+  [1m[35m (5.7ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying PRIMARY KEY, "value" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_try_advisory_lock(7381167824530102995);[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateUsers (20170216121248)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (8.2ms)[0m  [1m[35mCREATE TABLE "users" ("id" serial primary key, "email" character varying, "password_digest" character varying, "username" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20170216121248"]]
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreatePeriods (20170217160646)
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (6.4ms)[0m  [1m[35mCREATE TABLE "periods" ("id" serial primary key, "date" date, "bleeding" integer, "pain" integer, "user_id" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, CONSTRAINT "fk_rails_c26b977540"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+)[0m
+  [1m[35m (1.9ms)[0m  [1m[35mCREATE  INDEX  "index_periods_on_user_id" ON "periods"  ("user_id")[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20170217160646"]]
+  [1m[35m (2.0ms)[0m  [1m[35mCOMMIT[0m
+Migrating to AddAgeToUsers (20170217161652)
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.7ms)[0m  [1m[35mALTER TABLE "users" ADD "age" integer[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20170217161652"]]
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+Migrating to AddContraceptionToUsers (20170217162548)
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.5ms)[0m  [1m[35mALTER TABLE "users" ADD "contraception" character varying[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20170217162548"]]
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+Migrating to AddImageToUsers (20170217162926)
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.4ms)[0m  [1m[35mALTER TABLE "users" ADD "image" character varying[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20170217162926"]]
+  [1m[35m (0.9ms)[0m  [1m[35mCOMMIT[0m
+Migrating to AddNotesToPeriods (20170218130724)
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (2.6ms)[0m  [1m[35mALTER TABLE "periods" ADD "notes" text[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20170218130724"]]
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateContacts (20170223111851)
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (7.0ms)[0m  [1m[35mCREATE TABLE "contacts" ("id" serial primary key, "first_name" character varying, "last_name" character varying, "email" character varying, "user_id" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, CONSTRAINT "fk_rails_8d2134e55e"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+)[0m
+  [1m[35m (1.8ms)[0m  [1m[35mCREATE  INDEX  "index_contacts_on_user_id" ON "contacts"  ("user_id")[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20170223111851"]]
+  [1m[35m (3.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.5ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", :environment], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", 2017-02-23 12:22:42 UTC], ["updated_at", 2017-02-23 12:22:42 UTC]]
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_advisory_unlock(7381167824530102995)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mPeriod Load (0.7ms)[0m  [1m[34mSELECT "periods".* FROM "periods"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (1.0ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "leslie@president.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.8ms)[0m  [1m[32mINSERT INTO "users" ("email", "password_digest", "username", "created_at", "updated_at", "age", "contraception", "image") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["email", "leslie@president.com"], ["password_digest", "$2a$10$fhU6ikzYwjHVrCb98kzOBeupYdSBrlmDVMg5d/EdYm7Nx.Ox5pKP."], ["username", "Leslie"], ["created_at", 2017-02-23 12:23:13 UTC], ["updated_at", 2017-02-23 12:23:13 UTC], ["age", 40], ["contraception", "Pill"], ["image", "http://femspotter.files.wordpress.com/2009/11/leslie.jpg"]]
+  [1m[35m (0.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "selina@veep.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "users" ("email", "password_digest", "username", "created_at", "updated_at", "age", "contraception", "image") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["email", "selina@veep.com"], ["password_digest", "$2a$10$7kyGD.6gezuZAq/g3/DSMOH5fI5FKqcmmpmLSJF2vgin8HN1pkkfy"], ["username", "Selina"], ["created_at", 2017-02-23 12:23:13 UTC], ["updated_at", 2017-02-23 12:23:13 UTC], ["age", 45], ["contraception", "Implant"], ["image", "https://www.google.co.uk/url?sa=i&rct=j&q=&esrc=s&source=images&cd=&ved=0ahUKEwiw0OKXuaTSAhVJ6xQKHRDkANYQjRwIBw&url=http%3A%2F%2Fwww.glamour.com%2Fstory%2Fselina-meyer-hillary-clinton&bvm=bv.147448319,d.ZGg&psig=AFQjCNGaz79HKpOmTNoDN8hpvO-Kk7rX4w&ust=1487878419187499"]]
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "shosh@shoshanna.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "users" ("email", "password_digest", "username", "created_at", "updated_at", "age", "contraception", "image") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["email", "shosh@shoshanna.com"], ["password_digest", "$2a$10$3qtApl7HJ9z5Df3rsBXnEurjCDohzGfIny1qVPjOispcwNk2Eti.S"], ["username", "Shosh"], ["created_at", 2017-02-23 12:23:13 UTC], ["updated_at", 2017-02-23 12:23:13 UTC], ["age", 27], ["contraception", "IUD"], ["image", "http://www.celebitchy.com/wp-content/uploads/2013/02/wenn20151119.jpg"]]
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "jessa@jessa.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "users" ("email", "password_digest", "username", "created_at", "updated_at", "age", "contraception", "image") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["email", "jessa@jessa.com"], ["password_digest", "$2a$10$3BVMN5OGO/vsUZYHqIbPkeoCN/VgPBYPG1xybKl5c5fotSOFzypTW"], ["username", "Jessa"], ["created_at", 2017-02-23 12:23:14 UTC], ["updated_at", 2017-02-23 12:23:14 UTC], ["age", 31], ["contraception", "Pill"], ["image", "https://s-media-cache-ak0.pinimg.com/originals/0f/34/c2/0f34c244884132400e9bef7e98c3062c.jpg"]]
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mPeriod Load (0.3ms)[0m  [1m[34mSELECT  "periods".* FROM "periods" WHERE "periods"."date" = $1 LIMIT $2[0m  [["date", Sat, 17 Dec 2016], ["LIMIT", 1]]
+  [1m[35mSQL (1.3ms)[0m  [1m[32mINSERT INTO "periods" ("date", "bleeding", "pain", "user_id", "created_at", "updated_at", "notes") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["date", Sun, 18 Dec 2016], ["bleeding", 2], ["pain", 5], ["user_id", 1], ["created_at", 2017-02-23 12:23:14 UTC], ["updated_at", 2017-02-23 12:23:14 UTC], ["notes", "Pain is bad, had to take 4 ibuprofen."]]
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mPeriod Load (0.3ms)[0m  [1m[34mSELECT  "periods".* FROM "periods" WHERE "periods"."date" = $1 LIMIT $2[0m  [["date", Sun, 18 Dec 2016], ["LIMIT", 1]]
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "periods" ("date", "bleeding", "pain", "user_id", "created_at", "updated_at", "notes") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["date", Mon, 19 Dec 2016], ["bleeding", 2], ["pain", 5], ["user_id", 1], ["created_at", 2017-02-23 12:23:14 UTC], ["updated_at", 2017-02-23 12:23:14 UTC], ["notes", "Still painful, cramps and a splitting headache, which is exhausting."]]
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mPeriod Load (0.6ms)[0m  [1m[34mSELECT  "periods".* FROM "periods" WHERE "periods"."date" = $1 LIMIT $2[0m  [["date", Mon, 19 Dec 2016], ["LIMIT", 1]]
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "periods" ("date", "bleeding", "pain", "user_id", "created_at", "updated_at", "notes") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["date", Tue, 20 Dec 2016], ["bleeding", 2], ["pain", 4], ["user_id", 1], ["created_at", 2017-02-23 12:23:14 UTC], ["updated_at", 2017-02-23 12:23:14 UTC], ["notes", "Slightly less painful, but the cramps are still there."]]
+  [1m[35m (0.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mPeriod Load (0.4ms)[0m  [1m[34mSELECT  "periods".* FROM "periods" WHERE "periods"."date" = $1 LIMIT $2[0m  [["date", Tue, 20 Dec 2016], ["LIMIT", 1]]
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "periods" ("date", "bleeding", "pain", "user_id", "created_at", "updated_at", "notes") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["date", Wed, 21 Dec 2016], ["bleeding", 2], ["pain", 2], ["user_id", 1], ["created_at", 2017-02-23 12:23:14 UTC], ["updated_at", 2017-02-23 12:23:14 UTC], ["notes", "Much less painful, though I got another headache in the evening."]]
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mPeriod Load (0.3ms)[0m  [1m[34mSELECT  "periods".* FROM "periods" WHERE "periods"."date" = $1 LIMIT $2[0m  [["date", Wed, 21 Dec 2016], ["LIMIT", 1]]
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "periods" ("date", "bleeding", "pain", "user_id", "created_at", "updated_at", "notes") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["date", Thu, 22 Dec 2016], ["bleeding", 1], ["pain", 0], ["user_id", 1], ["created_at", 2017-02-23 12:23:14 UTC], ["updated_at", 2017-02-23 12:23:14 UTC], ["notes", "No pain today, and only light bleeding."]]
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mPeriod Load (0.3ms)[0m  [1m[34mSELECT  "periods".* FROM "periods" WHERE "periods"."date" = $1 LIMIT $2[0m  [["date", Sat, 14 Jan 2017], ["LIMIT", 1]]
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "periods" ("date", "bleeding", "pain", "user_id", "created_at", "updated_at", "notes") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["date", Sun, 15 Jan 2017], ["bleeding", 3], ["pain", 5], ["user_id", 1], ["created_at", 2017-02-23 12:23:14 UTC], ["updated_at", 2017-02-23 12:23:14 UTC], ["notes", "Very painful and heavy today, usual for the first day. Ben bought me flowers."]]
+  [1m[35m (1.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mPeriod Load (0.3ms)[0m  [1m[34mSELECT  "periods".* FROM "periods" WHERE "periods"."date" = $1 LIMIT $2[0m  [["date", Sun, 15 Jan 2017], ["LIMIT", 1]]
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "periods" ("date", "bleeding", "pain", "user_id", "created_at", "updated_at", "notes") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["date", Mon, 16 Jan 2017], ["bleeding", 2], ["pain", 2], ["user_id", 1], ["created_at", 2017-02-23 12:23:14 UTC], ["updated_at", 2017-02-23 12:23:14 UTC], ["notes", "Much easier today. Time to get on with some killer work."]]
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mPeriod Load (0.2ms)[0m  [1m[34mSELECT  "periods".* FROM "periods" WHERE "periods"."date" = $1 LIMIT $2[0m  [["date", Mon, 16 Jan 2017], ["LIMIT", 1]]
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "periods" ("date", "bleeding", "pain", "user_id", "created_at", "updated_at", "notes") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["date", Tue, 17 Jan 2017], ["bleeding", 2], ["pain", 1], ["user_id", 1], ["created_at", 2017-02-23 12:23:14 UTC], ["updated_at", 2017-02-23 12:23:14 UTC], ["notes", "Almost no pain today, which is good because I have so much work on."]]
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mPeriod Load (0.3ms)[0m  [1m[34mSELECT  "periods".* FROM "periods" WHERE "periods"."date" = $1 LIMIT $2[0m  [["date", Tue, 17 Jan 2017], ["LIMIT", 1]]
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "periods" ("date", "bleeding", "pain", "user_id", "created_at", "updated_at", "notes") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["date", Wed, 18 Jan 2017], ["bleeding", 2], ["pain", 1], ["user_id", 1], ["created_at", 2017-02-23 12:23:14 UTC], ["updated_at", 2017-02-23 12:23:14 UTC], ["notes", "Nothing to report."]]
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mPeriod Load (0.2ms)[0m  [1m[34mSELECT  "periods".* FROM "periods" WHERE "periods"."date" = $1 LIMIT $2[0m  [["date", Wed, 18 Jan 2017], ["LIMIT", 1]]
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "periods" ("date", "bleeding", "pain", "user_id", "created_at", "updated_at", "notes") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["date", Thu, 19 Jan 2017], ["bleeding", 1], ["pain", 0], ["user_id", 1], ["created_at", 2017-02-23 12:23:14 UTC], ["updated_at", 2017-02-23 12:23:14 UTC], ["notes", "Almost gone I hope."]]
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mPeriod Load (0.2ms)[0m  [1m[34mSELECT  "periods".* FROM "periods" WHERE "periods"."date" = $1 LIMIT $2[0m  [["date", Sat, 11 Feb 2017], ["LIMIT", 1]]
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "periods" ("date", "bleeding", "pain", "user_id", "created_at", "updated_at", "notes") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["date", Sun, 12 Feb 2017], ["bleeding", 3], ["pain", 4], ["user_id", 1], ["created_at", 2017-02-23 12:23:14 UTC], ["updated_at", 2017-02-23 12:23:14 UTC], ["notes", "Very tiring first day."]]
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mPeriod Load (0.3ms)[0m  [1m[34mSELECT  "periods".* FROM "periods" WHERE "periods"."date" = $1 LIMIT $2[0m  [["date", Sun, 12 Feb 2017], ["LIMIT", 1]]
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "periods" ("date", "bleeding", "pain", "user_id", "created_at", "updated_at", "notes") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["date", Mon, 13 Feb 2017], ["bleeding", 3], ["pain", 3], ["user_id", 1], ["created_at", 2017-02-23 12:23:14 UTC], ["updated_at", 2017-02-23 12:23:14 UTC], ["notes", "A little less painful, still quite exhausting."]]
+  [1m[35m (2.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mPeriod Load (0.3ms)[0m  [1m[34mSELECT  "periods".* FROM "periods" WHERE "periods"."date" = $1 LIMIT $2[0m  [["date", Mon, 13 Feb 2017], ["LIMIT", 1]]
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "periods" ("date", "bleeding", "pain", "user_id", "created_at", "updated_at", "notes") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["date", Tue, 14 Feb 2017], ["bleeding", 2], ["pain", 2], ["user_id", 1], ["created_at", 2017-02-23 12:23:14 UTC], ["updated_at", 2017-02-23 12:23:14 UTC], ["notes", "Much better today."]]
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mPeriod Load (0.2ms)[0m  [1m[34mSELECT  "periods".* FROM "periods" WHERE "periods"."date" = $1 LIMIT $2[0m  [["date", Tue, 14 Feb 2017], ["LIMIT", 1]]
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "periods" ("date", "bleeding", "pain", "user_id", "created_at", "updated_at", "notes") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["date", Wed, 15 Feb 2017], ["bleeding", 2], ["pain", 1], ["user_id", 1], ["created_at", 2017-02-23 12:23:14 UTC], ["updated_at", 2017-02-23 12:23:14 UTC], ["notes", "Going, going..."]]
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mPeriod Load (0.2ms)[0m  [1m[34mSELECT  "periods".* FROM "periods" WHERE "periods"."date" = $1 LIMIT $2[0m  [["date", Thu, 08 Dec 2016], ["LIMIT", 1]]
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "periods" ("date", "bleeding", "pain", "user_id", "created_at", "updated_at", "notes") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["date", Fri, 09 Dec 2016], ["bleeding", 1], ["pain", 1], ["user_id", 2], ["created_at", 2017-02-23 12:23:14 UTC], ["updated_at", 2017-02-23 12:23:14 UTC], ["notes", "Light and painless as is usual."]]
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mPeriod Load (0.3ms)[0m  [1m[34mSELECT  "periods".* FROM "periods" WHERE "periods"."date" = $1 LIMIT $2[0m  [["date", Fri, 09 Dec 2016], ["LIMIT", 1]]
+  [1m[35mSQL (0.9ms)[0m  [1m[32mINSERT INTO "periods" ("date", "bleeding", "pain", "user_id", "created_at", "updated_at", "notes") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["date", Sat, 10 Dec 2016], ["bleeding", 1], ["pain", 4], ["user_id", 2], ["created_at", 2017-02-23 12:23:14 UTC], ["updated_at", 2017-02-23 12:23:14 UTC], ["notes", "Strange amount of pain today, but no heavier."]]
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mPeriod Load (0.3ms)[0m  [1m[34mSELECT  "periods".* FROM "periods" WHERE "periods"."date" = $1 LIMIT $2[0m  [["date", Sat, 10 Dec 2016], ["LIMIT", 1]]
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "periods" ("date", "bleeding", "pain", "user_id", "created_at", "updated_at", "notes") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["date", Sun, 11 Dec 2016], ["bleeding", 1], ["pain", 4], ["user_id", 2], ["created_at", 2017-02-23 12:23:14 UTC], ["updated_at", 2017-02-23 12:23:14 UTC], ["notes", "Still painful, perhaps Gary should book an appointment with the doctor."]]
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mPeriod Load (0.3ms)[0m  [1m[34mSELECT  "periods".* FROM "periods" WHERE "periods"."date" = $1 LIMIT $2[0m  [["date", Tue, 10 Jan 2017], ["LIMIT", 1]]
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "periods" ("date", "bleeding", "pain", "user_id", "created_at", "updated_at", "notes") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["date", Wed, 11 Jan 2017], ["bleeding", 1], ["pain", 1], ["user_id", 2], ["created_at", 2017-02-23 12:23:14 UTC], ["updated_at", 2017-02-23 12:23:14 UTC], ["notes", "Light, pain-free."]]
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mPeriod Load (0.2ms)[0m  [1m[34mSELECT  "periods".* FROM "periods" WHERE "periods"."date" = $1 LIMIT $2[0m  [["date", Wed, 11 Jan 2017], ["LIMIT", 1]]
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "periods" ("date", "bleeding", "pain", "user_id", "created_at", "updated_at", "notes") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["date", Thu, 12 Jan 2017], ["bleeding", 1], ["pain", 2], ["user_id", 2], ["created_at", 2017-02-23 12:23:14 UTC], ["updated_at", 2017-02-23 12:23:14 UTC], ["notes", "Took lots of painkillers today."]]
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mPeriod Load (0.2ms)[0m  [1m[34mSELECT  "periods".* FROM "periods" WHERE "periods"."date" = $1 LIMIT $2[0m  [["date", Thu, 12 Jan 2017], ["LIMIT", 1]]
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "periods" ("date", "bleeding", "pain", "user_id", "created_at", "updated_at", "notes") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["date", Fri, 13 Jan 2017], ["bleeding", 1], ["pain", 1], ["user_id", 2], ["created_at", 2017-02-23 12:23:14 UTC], ["updated_at", 2017-02-23 12:23:14 UTC], ["notes", "All normal."]]
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mPeriod Load (0.2ms)[0m  [1m[34mSELECT  "periods".* FROM "periods" WHERE "periods"."date" = $1 LIMIT $2[0m  [["date", Sun, 12 Feb 2017], ["LIMIT", 1]]
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "periods" ("date", "bleeding", "pain", "user_id", "created_at", "updated_at", "notes") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["date", Mon, 13 Feb 2017], ["bleeding", 1], ["pain", 1], ["user_id", 2], ["created_at", 2017-02-23 12:23:14 UTC], ["updated_at", 2017-02-23 12:23:14 UTC], ["notes", "Started."]]
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mPeriod Load (0.3ms)[0m  [1m[34mSELECT  "periods".* FROM "periods" WHERE "periods"."date" = $1 LIMIT $2[0m  [["date", Mon, 13 Feb 2017], ["LIMIT", 1]]
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "periods" ("date", "bleeding", "pain", "user_id", "created_at", "updated_at", "notes") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["date", Tue, 14 Feb 2017], ["bleeding", 1], ["pain", 1], ["user_id", 2], ["created_at", 2017-02-23 12:23:14 UTC], ["updated_at", 2017-02-23 12:23:14 UTC], ["notes", "Fine"]]
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mPeriod Load (0.2ms)[0m  [1m[34mSELECT  "periods".* FROM "periods" WHERE "periods"."date" = $1 LIMIT $2[0m  [["date", Tue, 14 Feb 2017], ["LIMIT", 1]]
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "periods" ("date", "bleeding", "pain", "user_id", "created_at", "updated_at", "notes") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["date", Wed, 15 Feb 2017], ["bleeding", 1], ["pain", 1], ["user_id", 2], ["created_at", 2017-02-23 12:23:14 UTC], ["updated_at", 2017-02-23 12:23:14 UTC], ["notes", ""]]
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mPeriod Load (0.2ms)[0m  [1m[34mSELECT  "periods".* FROM "periods" WHERE "periods"."date" = $1 LIMIT $2[0m  [["date", Wed, 15 Feb 2017], ["LIMIT", 1]]
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "periods" ("date", "bleeding", "pain", "user_id", "created_at", "updated_at", "notes") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["date", Thu, 16 Feb 2017], ["bleeding", 1], ["pain", 1], ["user_id", 2], ["created_at", 2017-02-23 12:23:14 UTC], ["updated_at", 2017-02-23 12:23:14 UTC], ["notes", "Bit longer than usual."]]
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mPeriod Load (0.3ms)[0m  [1m[34mSELECT  "periods".* FROM "periods" WHERE "periods"."date" = $1 LIMIT $2[0m  [["date", Tue, 13 Dec 2016], ["LIMIT", 1]]
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "periods" ("date", "bleeding", "pain", "user_id", "created_at", "updated_at", "notes") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["date", Wed, 14 Dec 2016], ["bleeding", 2], ["pain", 2], ["user_id", 3], ["created_at", 2017-02-23 12:23:14 UTC], ["updated_at", 2017-02-23 12:23:14 UTC], ["notes", "Annoyingly started right before my birthday party."]]
+  [1m[35m (1.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mPeriod Load (0.2ms)[0m  [1m[34mSELECT  "periods".* FROM "periods" WHERE "periods"."date" = $1 LIMIT $2[0m  [["date", Wed, 14 Dec 2016], ["LIMIT", 1]]
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "periods" ("date", "bleeding", "pain", "user_id", "created_at", "updated_at", "notes") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["date", Thu, 15 Dec 2016], ["bleeding", 3], ["pain", 4], ["user_id", 3], ["created_at", 2017-02-23 12:23:14 UTC], ["updated_at", 2017-02-23 12:23:14 UTC], ["notes", "Heavy and painful today, hope it eases up before my party tonight."]]
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mPeriod Load (0.2ms)[0m  [1m[34mSELECT  "periods".* FROM "periods" WHERE "periods"."date" = $1 LIMIT $2[0m  [["date", Thu, 15 Dec 2016], ["LIMIT", 1]]
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "periods" ("date", "bleeding", "pain", "user_id", "created_at", "updated_at", "notes") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["date", Fri, 16 Dec 2016], ["bleeding", 2], ["pain", 3], ["user_id", 3], ["created_at", 2017-02-23 12:23:14 UTC], ["updated_at", 2017-02-23 12:23:14 UTC], ["notes", "Today is calmer, but I have a terrible headache. Not sure if that's from my period or from all the drinks last night though."]]
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mPeriod Load (0.3ms)[0m  [1m[34mSELECT  "periods".* FROM "periods" WHERE "periods"."date" = $1 LIMIT $2[0m  [["date", Fri, 16 Dec 2016], ["LIMIT", 1]]
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "periods" ("date", "bleeding", "pain", "user_id", "created_at", "updated_at", "notes") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["date", Sat, 17 Dec 2016], ["bleeding", 1], ["pain", 2], ["user_id", 3], ["created_at", 2017-02-23 12:23:14 UTC], ["updated_at", 2017-02-23 12:23:14 UTC], ["notes", "Almost out I imagine."]]
+  [1m[35m (1.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mPeriod Load (0.2ms)[0m  [1m[34mSELECT  "periods".* FROM "periods" WHERE "periods"."date" = $1 LIMIT $2[0m  [["date", Sat, 07 Jan 2017], ["LIMIT", 1]]
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "periods" ("date", "bleeding", "pain", "user_id", "created_at", "updated_at", "notes") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["date", Sun, 08 Jan 2017], ["bleeding", 2], ["pain", 2], ["user_id", 3], ["created_at", 2017-02-23 12:23:14 UTC], ["updated_at", 2017-02-23 12:23:14 UTC], ["notes", "Bit sooner than usual, I wasn't expecting it."]]
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mPeriod Load (0.2ms)[0m  [1m[34mSELECT  "periods".* FROM "periods" WHERE "periods"."date" = $1 LIMIT $2[0m  [["date", Sun, 08 Jan 2017], ["LIMIT", 1]]
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "periods" ("date", "bleeding", "pain", "user_id", "created_at", "updated_at", "notes") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["date", Mon, 09 Jan 2017], ["bleeding", 2], ["pain", 2], ["user_id", 3], ["created_at", 2017-02-23 12:23:14 UTC], ["updated_at", 2017-02-23 12:23:14 UTC], ["notes", "Fine."]]
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mPeriod Load (0.2ms)[0m  [1m[34mSELECT  "periods".* FROM "periods" WHERE "periods"."date" = $1 LIMIT $2[0m  [["date", Mon, 09 Jan 2017], ["LIMIT", 1]]
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "periods" ("date", "bleeding", "pain", "user_id", "created_at", "updated_at", "notes") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["date", Tue, 10 Jan 2017], ["bleeding", 2], ["pain", 3], ["user_id", 3], ["created_at", 2017-02-23 12:23:14 UTC], ["updated_at", 2017-02-23 12:23:14 UTC], ["notes", "Bit more painful today, but very manageable."]]
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mPeriod Load (0.2ms)[0m  [1m[34mSELECT  "periods".* FROM "periods" WHERE "periods"."date" = $1 LIMIT $2[0m  [["date", Tue, 10 Jan 2017], ["LIMIT", 1]]
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "periods" ("date", "bleeding", "pain", "user_id", "created_at", "updated_at", "notes") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["date", Wed, 11 Jan 2017], ["bleeding", 2], ["pain", 2], ["user_id", 3], ["created_at", 2017-02-23 12:23:14 UTC], ["updated_at", 2017-02-23 12:23:14 UTC], ["notes", "Back to normal."]]
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mPeriod Load (0.3ms)[0m  [1m[34mSELECT  "periods".* FROM "periods" WHERE "periods"."date" = $1 LIMIT $2[0m  [["date", Wed, 11 Jan 2017], ["LIMIT", 1]]
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "periods" ("date", "bleeding", "pain", "user_id", "created_at", "updated_at", "notes") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["date", Thu, 12 Jan 2017], ["bleeding", 2], ["pain", 1], ["user_id", 3], ["created_at", 2017-02-23 12:23:14 UTC], ["updated_at", 2017-02-23 12:23:14 UTC], ["notes", "When will it end?!"]]
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mPeriod Load (0.3ms)[0m  [1m[34mSELECT  "periods".* FROM "periods" WHERE "periods"."date" = $1 LIMIT $2[0m  [["date", Thu, 12 Jan 2017], ["LIMIT", 1]]
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "periods" ("date", "bleeding", "pain", "user_id", "created_at", "updated_at", "notes") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["date", Fri, 13 Jan 2017], ["bleeding", 1], ["pain", 1], ["user_id", 3], ["created_at", 2017-02-23 12:23:14 UTC], ["updated_at", 2017-02-23 12:23:14 UTC], ["notes", "Still going, I am so fed up."]]
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mPeriod Load (0.3ms)[0m  [1m[34mSELECT  "periods".* FROM "periods" WHERE "periods"."date" = $1 LIMIT $2[0m  [["date", Wed, 01 Feb 2017], ["LIMIT", 1]]
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "periods" ("date", "bleeding", "pain", "user_id", "created_at", "updated_at", "notes") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["date", Thu, 02 Feb 2017], ["bleeding", 3], ["pain", 5], ["user_id", 3], ["created_at", 2017-02-23 12:23:14 UTC], ["updated_at", 2017-02-23 12:23:14 UTC], ["notes", "Had painful cramps for days, finally started today."]]
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mPeriod Load (0.2ms)[0m  [1m[34mSELECT  "periods".* FROM "periods" WHERE "periods"."date" = $1 LIMIT $2[0m  [["date", Thu, 02 Feb 2017], ["LIMIT", 1]]
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "periods" ("date", "bleeding", "pain", "user_id", "created_at", "updated_at", "notes") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["date", Fri, 03 Feb 2017], ["bleeding", 3], ["pain", 4], ["user_id", 3], ["created_at", 2017-02-23 12:23:14 UTC], ["updated_at", 2017-02-23 12:23:14 UTC], ["notes", "Stayed at home today with a water bottle, I hate the coil!"]]
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mPeriod Load (0.2ms)[0m  [1m[34mSELECT  "periods".* FROM "periods" WHERE "periods"."date" = $1 LIMIT $2[0m  [["date", Fri, 03 Feb 2017], ["LIMIT", 1]]
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "periods" ("date", "bleeding", "pain", "user_id", "created_at", "updated_at", "notes") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["date", Sat, 04 Feb 2017], ["bleeding", 2], ["pain", 3], ["user_id", 3], ["created_at", 2017-02-23 12:23:14 UTC], ["updated_at", 2017-02-23 12:23:14 UTC], ["notes", "Back at work today, getting easier."]]
+  [1m[35m (1.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mPeriod Load (0.3ms)[0m  [1m[34mSELECT  "periods".* FROM "periods" WHERE "periods"."date" = $1 LIMIT $2[0m  [["date", Sat, 04 Feb 2017], ["LIMIT", 1]]
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "periods" ("date", "bleeding", "pain", "user_id", "created_at", "updated_at", "notes") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["date", Sun, 05 Feb 2017], ["bleeding", 2], ["pain", 2], ["user_id", 3], ["created_at", 2017-02-23 12:23:14 UTC], ["updated_at", 2017-02-23 12:23:14 UTC], ["notes", "Much better."]]
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mPeriod Load (0.2ms)[0m  [1m[34mSELECT  "periods".* FROM "periods" WHERE "periods"."date" = $1 LIMIT $2[0m  [["date", Sun, 05 Feb 2017], ["LIMIT", 1]]
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "periods" ("date", "bleeding", "pain", "user_id", "created_at", "updated_at", "notes") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["date", Mon, 06 Feb 2017], ["bleeding", 1], ["pain", 1], ["user_id", 3], ["created_at", 2017-02-23 12:23:14 UTC], ["updated_at", 2017-02-23 12:23:14 UTC], ["notes", "Almost gone I think."]]
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35mSQL (1.4ms)[0m  [1m[32mINSERT INTO "contacts" ("first_name", "last_name", "email", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["first_name", "Anne"], ["last_name", "Perkins"], ["email", "anne@perkins.com"], ["user_id", 1], ["created_at", 2017-02-23 12:23:14 UTC], ["updated_at", 2017-02-23 12:23:14 UTC]]
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "contacts" ("first_name", "last_name", "email", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["first_name", "Ben"], ["last_name", "Wyatt"], ["email", "ben@wyatt.com"], ["user_id", 1], ["created_at", 2017-02-23 12:23:14 UTC], ["updated_at", 2017-02-23 12:23:14 UTC]]
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
