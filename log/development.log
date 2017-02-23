@@ -36056,3 +36056,237 @@ FOREIGN KEY ("user_id")
   [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
   [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_advisory_unlock(7381167824530102995)[0m
   [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Started GET "/users/3" for 127.0.0.1 at 2017-02-23 11:49:36 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (1.0ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.18ms)
+Filter chain halted as :authenticate_user! rendered or redirected
+Completed 401 Unauthorized in 38ms (Views: 7.1ms | ActiveRecord: 9.6ms)
+
+
+Started POST "/login" for 127.0.0.1 at 2017-02-23 11:49:39 +0000
+Processing by AuthenticationsController#login as HTML
+  Parameters: {"email"=>"shosh@shoshanna.com", "password"=>"[FILTERED]", "authentication"=>{"email"=>"shosh@shoshanna.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "shosh@shoshanna.com"], ["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.11ms)
+Completed 401 Unauthorized in 6ms (Views: 1.9ms | ActiveRecord: 1.1ms)
+
+
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mPeriod Load (1.1ms)[0m  [1m[34mSELECT "periods".* FROM "periods"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (1.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "leslie@president.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.8ms)[0m  [1m[32mINSERT INTO "users" ("email", "password_digest", "username", "created_at", "updated_at", "age", "contraception", "image") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["email", "leslie@president.com"], ["password_digest", "$2a$10$l9ymIvj3ZK0DMrWlehC8cex/bgvVRERSfaO7PmwZkXc3AHbunhNcS"], ["username", "Leslie"], ["created_at", 2017-02-23 11:49:59 UTC], ["updated_at", 2017-02-23 11:49:59 UTC], ["age", 40], ["contraception", "Pill"], ["image", "http://femspotter.files.wordpress.com/2009/11/leslie.jpg"]]
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "selina@veep.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "users" ("email", "password_digest", "username", "created_at", "updated_at", "age", "contraception", "image") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["email", "selina@veep.com"], ["password_digest", "$2a$10$QXcIRUt2N0QeVN49m18U.OVgnIPRqYYTeCf8HP6E9KjAfhMs89Xju"], ["username", "Selina"], ["created_at", 2017-02-23 11:49:59 UTC], ["updated_at", 2017-02-23 11:49:59 UTC], ["age", 45], ["contraception", "Implant"], ["image", "https://www.google.co.uk/url?sa=i&rct=j&q=&esrc=s&source=images&cd=&ved=0ahUKEwiw0OKXuaTSAhVJ6xQKHRDkANYQjRwIBw&url=http%3A%2F%2Fwww.glamour.com%2Fstory%2Fselina-meyer-hillary-clinton&bvm=bv.147448319,d.ZGg&psig=AFQjCNGaz79HKpOmTNoDN8hpvO-Kk7rX4w&ust=1487878419187499"]]
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "shosh@shoshanna.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "users" ("email", "password_digest", "username", "created_at", "updated_at", "age", "contraception", "image") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["email", "shosh@shoshanna.com"], ["password_digest", "$2a$10$NrngqKT4ptf26AGf8zGb8.HBnm0ZrJQus/FIMX0nsDbK6ygHGtEme"], ["username", "Shosh"], ["created_at", 2017-02-23 11:49:59 UTC], ["updated_at", 2017-02-23 11:49:59 UTC], ["age", 27], ["contraception", "IUD"], ["image", "http://www.celebitchy.com/wp-content/uploads/2013/02/wenn20151119.jpg"]]
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "jessa@jessa.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "users" ("email", "password_digest", "username", "created_at", "updated_at", "age", "contraception", "image") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["email", "jessa@jessa.com"], ["password_digest", "$2a$10$77DxbmGMQN5LOYxbyL5EI.aa6zadTVv8Tjqxf3AOSpNggZ8.iHKCS"], ["username", "Jessa"], ["created_at", 2017-02-23 11:50:00 UTC], ["updated_at", 2017-02-23 11:50:00 UTC], ["age", 31], ["contraception", "Pill"], ["image", "https://s-media-cache-ak0.pinimg.com/originals/0f/34/c2/0f34c244884132400e9bef7e98c3062c.jpg"]]
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mPeriod Load (0.4ms)[0m  [1m[34mSELECT  "periods".* FROM "periods" WHERE "periods"."date" = $1 LIMIT $2[0m  [["date", Sat, 17 Dec 2016], ["LIMIT", 1]]
+  [1m[35mSQL (1.4ms)[0m  [1m[32mINSERT INTO "periods" ("date", "bleeding", "pain", "user_id", "created_at", "updated_at", "notes") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["date", Sun, 18 Dec 2016], ["bleeding", 2], ["pain", 5], ["user_id", 1], ["created_at", 2017-02-23 11:50:00 UTC], ["updated_at", 2017-02-23 11:50:00 UTC], ["notes", "Pain is bad, had to take 4 ibuprofen."]]
+  [1m[35m (0.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mPeriod Load (0.5ms)[0m  [1m[34mSELECT  "periods".* FROM "periods" WHERE "periods"."date" = $1 LIMIT $2[0m  [["date", Sun, 18 Dec 2016], ["LIMIT", 1]]
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "periods" ("date", "bleeding", "pain", "user_id", "created_at", "updated_at", "notes") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["date", Mon, 19 Dec 2016], ["bleeding", 2], ["pain", 5], ["user_id", 1], ["created_at", 2017-02-23 11:50:00 UTC], ["updated_at", 2017-02-23 11:50:00 UTC], ["notes", "Still painful, cramps and a splitting headache, which is exhausting."]]
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mPeriod Load (0.4ms)[0m  [1m[34mSELECT  "periods".* FROM "periods" WHERE "periods"."date" = $1 LIMIT $2[0m  [["date", Mon, 19 Dec 2016], ["LIMIT", 1]]
+  [1m[35mSQL (0.8ms)[0m  [1m[32mINSERT INTO "periods" ("date", "bleeding", "pain", "user_id", "created_at", "updated_at", "notes") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["date", Tue, 20 Dec 2016], ["bleeding", 2], ["pain", 4], ["user_id", 1], ["created_at", 2017-02-23 11:50:00 UTC], ["updated_at", 2017-02-23 11:50:00 UTC], ["notes", "Slightly less painful, but the cramps are still there."]]
+  [1m[35m (1.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mPeriod Load (0.5ms)[0m  [1m[34mSELECT  "periods".* FROM "periods" WHERE "periods"."date" = $1 LIMIT $2[0m  [["date", Tue, 20 Dec 2016], ["LIMIT", 1]]
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "periods" ("date", "bleeding", "pain", "user_id", "created_at", "updated_at", "notes") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["date", Wed, 21 Dec 2016], ["bleeding", 2], ["pain", 2], ["user_id", 1], ["created_at", 2017-02-23 11:50:00 UTC], ["updated_at", 2017-02-23 11:50:00 UTC], ["notes", "Much less painful, though I got another headache in the evening."]]
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mPeriod Load (0.4ms)[0m  [1m[34mSELECT  "periods".* FROM "periods" WHERE "periods"."date" = $1 LIMIT $2[0m  [["date", Wed, 21 Dec 2016], ["LIMIT", 1]]
+  [1m[35mSQL (0.9ms)[0m  [1m[32mINSERT INTO "periods" ("date", "bleeding", "pain", "user_id", "created_at", "updated_at", "notes") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["date", Thu, 22 Dec 2016], ["bleeding", 1], ["pain", 0], ["user_id", 1], ["created_at", 2017-02-23 11:50:00 UTC], ["updated_at", 2017-02-23 11:50:00 UTC], ["notes", "No pain today, and only light bleeding."]]
+  [1m[35m (1.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mPeriod Load (0.4ms)[0m  [1m[34mSELECT  "periods".* FROM "periods" WHERE "periods"."date" = $1 LIMIT $2[0m  [["date", Sat, 14 Jan 2017], ["LIMIT", 1]]
+  [1m[35mSQL (0.9ms)[0m  [1m[32mINSERT INTO "periods" ("date", "bleeding", "pain", "user_id", "created_at", "updated_at", "notes") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["date", Sun, 15 Jan 2017], ["bleeding", 3], ["pain", 5], ["user_id", 1], ["created_at", 2017-02-23 11:50:00 UTC], ["updated_at", 2017-02-23 11:50:00 UTC], ["notes", "Very painful and heavy today, usual for the first day. Ben bought me flowers."]]
+  [1m[35m (1.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mPeriod Load (0.3ms)[0m  [1m[34mSELECT  "periods".* FROM "periods" WHERE "periods"."date" = $1 LIMIT $2[0m  [["date", Sun, 15 Jan 2017], ["LIMIT", 1]]
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "periods" ("date", "bleeding", "pain", "user_id", "created_at", "updated_at", "notes") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["date", Mon, 16 Jan 2017], ["bleeding", 2], ["pain", 2], ["user_id", 1], ["created_at", 2017-02-23 11:50:00 UTC], ["updated_at", 2017-02-23 11:50:00 UTC], ["notes", "Much easier today. Time to get on with some killer work."]]
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mPeriod Load (0.2ms)[0m  [1m[34mSELECT  "periods".* FROM "periods" WHERE "periods"."date" = $1 LIMIT $2[0m  [["date", Mon, 16 Jan 2017], ["LIMIT", 1]]
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "periods" ("date", "bleeding", "pain", "user_id", "created_at", "updated_at", "notes") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["date", Tue, 17 Jan 2017], ["bleeding", 2], ["pain", 1], ["user_id", 1], ["created_at", 2017-02-23 11:50:00 UTC], ["updated_at", 2017-02-23 11:50:00 UTC], ["notes", "Almost no pain today, which is good because I have so much work on."]]
+  [1m[35m (0.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mPeriod Load (0.3ms)[0m  [1m[34mSELECT  "periods".* FROM "periods" WHERE "periods"."date" = $1 LIMIT $2[0m  [["date", Tue, 17 Jan 2017], ["LIMIT", 1]]
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "periods" ("date", "bleeding", "pain", "user_id", "created_at", "updated_at", "notes") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["date", Wed, 18 Jan 2017], ["bleeding", 2], ["pain", 1], ["user_id", 1], ["created_at", 2017-02-23 11:50:00 UTC], ["updated_at", 2017-02-23 11:50:00 UTC], ["notes", "Nothing to report."]]
+  [1m[35m (1.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mPeriod Load (0.3ms)[0m  [1m[34mSELECT  "periods".* FROM "periods" WHERE "periods"."date" = $1 LIMIT $2[0m  [["date", Wed, 18 Jan 2017], ["LIMIT", 1]]
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "periods" ("date", "bleeding", "pain", "user_id", "created_at", "updated_at", "notes") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["date", Thu, 19 Jan 2017], ["bleeding", 1], ["pain", 0], ["user_id", 1], ["created_at", 2017-02-23 11:50:00 UTC], ["updated_at", 2017-02-23 11:50:00 UTC], ["notes", "Almost gone I hope."]]
+  [1m[35m (1.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mPeriod Load (0.3ms)[0m  [1m[34mSELECT  "periods".* FROM "periods" WHERE "periods"."date" = $1 LIMIT $2[0m  [["date", Sat, 11 Feb 2017], ["LIMIT", 1]]
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "periods" ("date", "bleeding", "pain", "user_id", "created_at", "updated_at", "notes") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["date", Sun, 12 Feb 2017], ["bleeding", 3], ["pain", 4], ["user_id", 1], ["created_at", 2017-02-23 11:50:00 UTC], ["updated_at", 2017-02-23 11:50:00 UTC], ["notes", "Very tiring first day."]]
+  [1m[35m (2.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mPeriod Load (0.3ms)[0m  [1m[34mSELECT  "periods".* FROM "periods" WHERE "periods"."date" = $1 LIMIT $2[0m  [["date", Sun, 12 Feb 2017], ["LIMIT", 1]]
+  [1m[35mSQL (0.8ms)[0m  [1m[32mINSERT INTO "periods" ("date", "bleeding", "pain", "user_id", "created_at", "updated_at", "notes") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["date", Mon, 13 Feb 2017], ["bleeding", 3], ["pain", 3], ["user_id", 1], ["created_at", 2017-02-23 11:50:00 UTC], ["updated_at", 2017-02-23 11:50:00 UTC], ["notes", "A little less painful, still quite exhausting."]]
+  [1m[35m (1.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mPeriod Load (0.3ms)[0m  [1m[34mSELECT  "periods".* FROM "periods" WHERE "periods"."date" = $1 LIMIT $2[0m  [["date", Mon, 13 Feb 2017], ["LIMIT", 1]]
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "periods" ("date", "bleeding", "pain", "user_id", "created_at", "updated_at", "notes") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["date", Tue, 14 Feb 2017], ["bleeding", 2], ["pain", 2], ["user_id", 1], ["created_at", 2017-02-23 11:50:00 UTC], ["updated_at", 2017-02-23 11:50:00 UTC], ["notes", "Much better today."]]
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mPeriod Load (0.3ms)[0m  [1m[34mSELECT  "periods".* FROM "periods" WHERE "periods"."date" = $1 LIMIT $2[0m  [["date", Tue, 14 Feb 2017], ["LIMIT", 1]]
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "periods" ("date", "bleeding", "pain", "user_id", "created_at", "updated_at", "notes") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["date", Wed, 15 Feb 2017], ["bleeding", 2], ["pain", 1], ["user_id", 1], ["created_at", 2017-02-23 11:50:00 UTC], ["updated_at", 2017-02-23 11:50:00 UTC], ["notes", "Going, going..."]]
+  [1m[35m (2.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mPeriod Load (0.3ms)[0m  [1m[34mSELECT  "periods".* FROM "periods" WHERE "periods"."date" = $1 LIMIT $2[0m  [["date", Thu, 08 Dec 2016], ["LIMIT", 1]]
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "periods" ("date", "bleeding", "pain", "user_id", "created_at", "updated_at", "notes") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["date", Fri, 09 Dec 2016], ["bleeding", 1], ["pain", 1], ["user_id", 2], ["created_at", 2017-02-23 11:50:00 UTC], ["updated_at", 2017-02-23 11:50:00 UTC], ["notes", "Light and painless as is usual."]]
+  [1m[35m (2.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mPeriod Load (0.2ms)[0m  [1m[34mSELECT  "periods".* FROM "periods" WHERE "periods"."date" = $1 LIMIT $2[0m  [["date", Fri, 09 Dec 2016], ["LIMIT", 1]]
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "periods" ("date", "bleeding", "pain", "user_id", "created_at", "updated_at", "notes") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["date", Sat, 10 Dec 2016], ["bleeding", 1], ["pain", 4], ["user_id", 2], ["created_at", 2017-02-23 11:50:00 UTC], ["updated_at", 2017-02-23 11:50:00 UTC], ["notes", "Strange amount of pain today, but no heavier."]]
+  [1m[35m (1.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mPeriod Load (0.3ms)[0m  [1m[34mSELECT  "periods".* FROM "periods" WHERE "periods"."date" = $1 LIMIT $2[0m  [["date", Sat, 10 Dec 2016], ["LIMIT", 1]]
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "periods" ("date", "bleeding", "pain", "user_id", "created_at", "updated_at", "notes") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["date", Sun, 11 Dec 2016], ["bleeding", 1], ["pain", 4], ["user_id", 2], ["created_at", 2017-02-23 11:50:00 UTC], ["updated_at", 2017-02-23 11:50:00 UTC], ["notes", "Still painful, perhaps Gary should book an appointment with the doctor."]]
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mPeriod Load (0.3ms)[0m  [1m[34mSELECT  "periods".* FROM "periods" WHERE "periods"."date" = $1 LIMIT $2[0m  [["date", Tue, 10 Jan 2017], ["LIMIT", 1]]
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "periods" ("date", "bleeding", "pain", "user_id", "created_at", "updated_at", "notes") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["date", Wed, 11 Jan 2017], ["bleeding", 1], ["pain", 1], ["user_id", 2], ["created_at", 2017-02-23 11:50:00 UTC], ["updated_at", 2017-02-23 11:50:00 UTC], ["notes", "Light, pain-free."]]
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mPeriod Load (0.2ms)[0m  [1m[34mSELECT  "periods".* FROM "periods" WHERE "periods"."date" = $1 LIMIT $2[0m  [["date", Wed, 11 Jan 2017], ["LIMIT", 1]]
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "periods" ("date", "bleeding", "pain", "user_id", "created_at", "updated_at", "notes") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["date", Thu, 12 Jan 2017], ["bleeding", 1], ["pain", 2], ["user_id", 2], ["created_at", 2017-02-23 11:50:00 UTC], ["updated_at", 2017-02-23 11:50:00 UTC], ["notes", "Took lots of painkillers today."]]
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mPeriod Load (0.3ms)[0m  [1m[34mSELECT  "periods".* FROM "periods" WHERE "periods"."date" = $1 LIMIT $2[0m  [["date", Thu, 12 Jan 2017], ["LIMIT", 1]]
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "periods" ("date", "bleeding", "pain", "user_id", "created_at", "updated_at", "notes") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["date", Fri, 13 Jan 2017], ["bleeding", 1], ["pain", 1], ["user_id", 2], ["created_at", 2017-02-23 11:50:00 UTC], ["updated_at", 2017-02-23 11:50:00 UTC], ["notes", "All normal."]]
+  [1m[35m (2.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mPeriod Load (0.3ms)[0m  [1m[34mSELECT  "periods".* FROM "periods" WHERE "periods"."date" = $1 LIMIT $2[0m  [["date", Sun, 12 Feb 2017], ["LIMIT", 1]]
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "periods" ("date", "bleeding", "pain", "user_id", "created_at", "updated_at", "notes") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["date", Mon, 13 Feb 2017], ["bleeding", 1], ["pain", 1], ["user_id", 2], ["created_at", 2017-02-23 11:50:00 UTC], ["updated_at", 2017-02-23 11:50:00 UTC], ["notes", "Started."]]
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mPeriod Load (0.3ms)[0m  [1m[34mSELECT  "periods".* FROM "periods" WHERE "periods"."date" = $1 LIMIT $2[0m  [["date", Mon, 13 Feb 2017], ["LIMIT", 1]]
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "periods" ("date", "bleeding", "pain", "user_id", "created_at", "updated_at", "notes") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["date", Tue, 14 Feb 2017], ["bleeding", 1], ["pain", 1], ["user_id", 2], ["created_at", 2017-02-23 11:50:00 UTC], ["updated_at", 2017-02-23 11:50:00 UTC], ["notes", "Fine"]]
+  [1m[35m (1.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mPeriod Load (0.3ms)[0m  [1m[34mSELECT  "periods".* FROM "periods" WHERE "periods"."date" = $1 LIMIT $2[0m  [["date", Tue, 14 Feb 2017], ["LIMIT", 1]]
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "periods" ("date", "bleeding", "pain", "user_id", "created_at", "updated_at", "notes") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["date", Wed, 15 Feb 2017], ["bleeding", 1], ["pain", 1], ["user_id", 2], ["created_at", 2017-02-23 11:50:00 UTC], ["updated_at", 2017-02-23 11:50:00 UTC], ["notes", ""]]
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mPeriod Load (0.2ms)[0m  [1m[34mSELECT  "periods".* FROM "periods" WHERE "periods"."date" = $1 LIMIT $2[0m  [["date", Wed, 15 Feb 2017], ["LIMIT", 1]]
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "periods" ("date", "bleeding", "pain", "user_id", "created_at", "updated_at", "notes") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["date", Thu, 16 Feb 2017], ["bleeding", 1], ["pain", 1], ["user_id", 2], ["created_at", 2017-02-23 11:50:00 UTC], ["updated_at", 2017-02-23 11:50:00 UTC], ["notes", "Bit longer than usual."]]
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mPeriod Load (0.2ms)[0m  [1m[34mSELECT  "periods".* FROM "periods" WHERE "periods"."date" = $1 LIMIT $2[0m  [["date", Tue, 13 Dec 2016], ["LIMIT", 1]]
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "periods" ("date", "bleeding", "pain", "user_id", "created_at", "updated_at", "notes") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["date", Wed, 14 Dec 2016], ["bleeding", 2], ["pain", 2], ["user_id", 3], ["created_at", 2017-02-23 11:50:00 UTC], ["updated_at", 2017-02-23 11:50:00 UTC], ["notes", "Annoyingly started right before my birthday party."]]
+  [1m[35m (1.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mPeriod Load (0.2ms)[0m  [1m[34mSELECT  "periods".* FROM "periods" WHERE "periods"."date" = $1 LIMIT $2[0m  [["date", Wed, 14 Dec 2016], ["LIMIT", 1]]
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "periods" ("date", "bleeding", "pain", "user_id", "created_at", "updated_at", "notes") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["date", Thu, 15 Dec 2016], ["bleeding", 3], ["pain", 4], ["user_id", 3], ["created_at", 2017-02-23 11:50:00 UTC], ["updated_at", 2017-02-23 11:50:00 UTC], ["notes", "Heavy and painful today, hope it eases up before my party tonight."]]
+  [1m[35m (1.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mPeriod Load (0.3ms)[0m  [1m[34mSELECT  "periods".* FROM "periods" WHERE "periods"."date" = $1 LIMIT $2[0m  [["date", Thu, 15 Dec 2016], ["LIMIT", 1]]
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "periods" ("date", "bleeding", "pain", "user_id", "created_at", "updated_at", "notes") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["date", Fri, 16 Dec 2016], ["bleeding", 2], ["pain", 3], ["user_id", 3], ["created_at", 2017-02-23 11:50:00 UTC], ["updated_at", 2017-02-23 11:50:00 UTC], ["notes", "Today is calmer, but I have a terrible headache. Not sure if that's from my period or from all the drinks last night though."]]
+  [1m[35m (2.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mPeriod Load (0.2ms)[0m  [1m[34mSELECT  "periods".* FROM "periods" WHERE "periods"."date" = $1 LIMIT $2[0m  [["date", Fri, 16 Dec 2016], ["LIMIT", 1]]
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "periods" ("date", "bleeding", "pain", "user_id", "created_at", "updated_at", "notes") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["date", Sat, 17 Dec 2016], ["bleeding", 1], ["pain", 2], ["user_id", 3], ["created_at", 2017-02-23 11:50:00 UTC], ["updated_at", 2017-02-23 11:50:00 UTC], ["notes", "Almost out I imagine."]]
+  [1m[35m (1.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mPeriod Load (0.2ms)[0m  [1m[34mSELECT  "periods".* FROM "periods" WHERE "periods"."date" = $1 LIMIT $2[0m  [["date", Sat, 07 Jan 2017], ["LIMIT", 1]]
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "periods" ("date", "bleeding", "pain", "user_id", "created_at", "updated_at", "notes") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["date", Sun, 08 Jan 2017], ["bleeding", 2], ["pain", 2], ["user_id", 3], ["created_at", 2017-02-23 11:50:00 UTC], ["updated_at", 2017-02-23 11:50:00 UTC], ["notes", "Bit sooner than usual, I wasn't expecting it."]]
+  [1m[35m (1.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mPeriod Load (0.3ms)[0m  [1m[34mSELECT  "periods".* FROM "periods" WHERE "periods"."date" = $1 LIMIT $2[0m  [["date", Sun, 08 Jan 2017], ["LIMIT", 1]]
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "periods" ("date", "bleeding", "pain", "user_id", "created_at", "updated_at", "notes") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["date", Mon, 09 Jan 2017], ["bleeding", 2], ["pain", 2], ["user_id", 3], ["created_at", 2017-02-23 11:50:00 UTC], ["updated_at", 2017-02-23 11:50:00 UTC], ["notes", "Fine."]]
+  [1m[35m (2.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mPeriod Load (0.2ms)[0m  [1m[34mSELECT  "periods".* FROM "periods" WHERE "periods"."date" = $1 LIMIT $2[0m  [["date", Mon, 09 Jan 2017], ["LIMIT", 1]]
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "periods" ("date", "bleeding", "pain", "user_id", "created_at", "updated_at", "notes") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["date", Tue, 10 Jan 2017], ["bleeding", 2], ["pain", 3], ["user_id", 3], ["created_at", 2017-02-23 11:50:00 UTC], ["updated_at", 2017-02-23 11:50:00 UTC], ["notes", "Bit more painful today, but very manageable."]]
+  [1m[35m (1.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mPeriod Load (0.3ms)[0m  [1m[34mSELECT  "periods".* FROM "periods" WHERE "periods"."date" = $1 LIMIT $2[0m  [["date", Tue, 10 Jan 2017], ["LIMIT", 1]]
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "periods" ("date", "bleeding", "pain", "user_id", "created_at", "updated_at", "notes") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["date", Wed, 11 Jan 2017], ["bleeding", 2], ["pain", 2], ["user_id", 3], ["created_at", 2017-02-23 11:50:00 UTC], ["updated_at", 2017-02-23 11:50:00 UTC], ["notes", "Back to normal."]]
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mPeriod Load (0.2ms)[0m  [1m[34mSELECT  "periods".* FROM "periods" WHERE "periods"."date" = $1 LIMIT $2[0m  [["date", Wed, 11 Jan 2017], ["LIMIT", 1]]
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "periods" ("date", "bleeding", "pain", "user_id", "created_at", "updated_at", "notes") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["date", Thu, 12 Jan 2017], ["bleeding", 2], ["pain", 1], ["user_id", 3], ["created_at", 2017-02-23 11:50:00 UTC], ["updated_at", 2017-02-23 11:50:00 UTC], ["notes", "When will it end?!"]]
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mPeriod Load (0.3ms)[0m  [1m[34mSELECT  "periods".* FROM "periods" WHERE "periods"."date" = $1 LIMIT $2[0m  [["date", Thu, 12 Jan 2017], ["LIMIT", 1]]
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "periods" ("date", "bleeding", "pain", "user_id", "created_at", "updated_at", "notes") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["date", Fri, 13 Jan 2017], ["bleeding", 1], ["pain", 1], ["user_id", 3], ["created_at", 2017-02-23 11:50:00 UTC], ["updated_at", 2017-02-23 11:50:00 UTC], ["notes", "Still going, I am so fed up."]]
+  [1m[35m (2.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mPeriod Load (0.5ms)[0m  [1m[34mSELECT  "periods".* FROM "periods" WHERE "periods"."date" = $1 LIMIT $2[0m  [["date", Wed, 01 Feb 2017], ["LIMIT", 1]]
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "periods" ("date", "bleeding", "pain", "user_id", "created_at", "updated_at", "notes") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["date", Thu, 02 Feb 2017], ["bleeding", 3], ["pain", 5], ["user_id", 3], ["created_at", 2017-02-23 11:50:00 UTC], ["updated_at", 2017-02-23 11:50:00 UTC], ["notes", "Had painful cramps for days, finally started today."]]
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mPeriod Load (0.3ms)[0m  [1m[34mSELECT  "periods".* FROM "periods" WHERE "periods"."date" = $1 LIMIT $2[0m  [["date", Thu, 02 Feb 2017], ["LIMIT", 1]]
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "periods" ("date", "bleeding", "pain", "user_id", "created_at", "updated_at", "notes") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["date", Fri, 03 Feb 2017], ["bleeding", 3], ["pain", 4], ["user_id", 3], ["created_at", 2017-02-23 11:50:00 UTC], ["updated_at", 2017-02-23 11:50:00 UTC], ["notes", "Stayed at home today with a water bottle, I hate the coil!"]]
+  [1m[35m (2.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mPeriod Load (0.3ms)[0m  [1m[34mSELECT  "periods".* FROM "periods" WHERE "periods"."date" = $1 LIMIT $2[0m  [["date", Fri, 03 Feb 2017], ["LIMIT", 1]]
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "periods" ("date", "bleeding", "pain", "user_id", "created_at", "updated_at", "notes") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["date", Sat, 04 Feb 2017], ["bleeding", 2], ["pain", 3], ["user_id", 3], ["created_at", 2017-02-23 11:50:00 UTC], ["updated_at", 2017-02-23 11:50:00 UTC], ["notes", "Back at work today, getting easier."]]
+  [1m[35m (0.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mPeriod Load (0.2ms)[0m  [1m[34mSELECT  "periods".* FROM "periods" WHERE "periods"."date" = $1 LIMIT $2[0m  [["date", Sat, 04 Feb 2017], ["LIMIT", 1]]
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "periods" ("date", "bleeding", "pain", "user_id", "created_at", "updated_at", "notes") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["date", Sun, 05 Feb 2017], ["bleeding", 2], ["pain", 2], ["user_id", 3], ["created_at", 2017-02-23 11:50:00 UTC], ["updated_at", 2017-02-23 11:50:00 UTC], ["notes", "Much better."]]
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mPeriod Load (0.3ms)[0m  [1m[34mSELECT  "periods".* FROM "periods" WHERE "periods"."date" = $1 LIMIT $2[0m  [["date", Sun, 05 Feb 2017], ["LIMIT", 1]]
+  [1m[35mSQL (0.9ms)[0m  [1m[32mINSERT INTO "periods" ("date", "bleeding", "pain", "user_id", "created_at", "updated_at", "notes") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["date", Mon, 06 Feb 2017], ["bleeding", 1], ["pain", 1], ["user_id", 3], ["created_at", 2017-02-23 11:50:00 UTC], ["updated_at", 2017-02-23 11:50:00 UTC], ["notes", "Almost gone I think."]]
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
