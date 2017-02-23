@@ -311,18 +311,3 @@ Period.create([
     user_id: 3
   }
 ])
-
-Contact.create([
-  {
-    first_name: 'Anne',
-    last_name: 'Perkins',
-    email: 'anne@perkins.com',
-    user_id: 1
-  },
-  {
-    first_name: 'Ben',
-    last_name: 'Wyatt',
-    email: 'ben@wyatt.com',
-    user_id: 1
-  }
-  ])
